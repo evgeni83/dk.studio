@@ -109,8 +109,7 @@
   }
 }
 
-/* Landscape tablets and medium desktops */
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
   .header {
     &-wrapper {
       align-items: flex-start;

@@ -64,8 +64,7 @@
   font-family: "Plumb", Arial, Helvetica, sans-serif;
   color: #B2ACA6;
   cursor: default;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  z-index: 50;
 }
 
 html,
@@ -102,6 +101,7 @@ button {
 }
 
 .page-wrapper {
+  position: relative;
   height: 100vh;
   background-color: black;
 }
@@ -239,8 +239,7 @@ button {
   top: 4px;
 }
 
-/* Landscape tablets and medium desktops */
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
   .header-wrapper {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -286,5 +285,163 @@ button {
     letter-spacing: 3.5px;
     line-height: 16px;
   }
+}
+
+.home-page-page-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 50px;
+}
+
+.home-page-main {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 330px;
+          flex: 0 1 330px;
+}
+
+.home-page-main .container {
+  height: 100%;
+}
+
+.home-page-main-wrapper {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home-page-main__title {
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 72px;
+  color: #DCD6D1;
+}
+
+.home-page-main__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home-page-main__text, .home-page-main__link {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
+  color: #fff;
+  margin-right: 20px;
+}
+
+.home-page-main__link {
+  font-weight: bold;
+  text-transform: uppercase;
+  background-image: url(../img/icons/right-arrow-icon.png);
+  background-repeat: no-repeat;
+  background-position: 99% 50%;
+  padding-right: 30px;
+}
+
+.home-page-slider {
+  min-width: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.home-page-slider__item {
+  position: relative;
+}
+
+.home-page-slider__img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.home-page-slider .slick-list {
+  overflow: hidden;
+  height: 100%;
+}
+
+.home-page-slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.home-page-slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#261B0F), color-stop(42.19%, rgba(38, 27, 15, 0.785582)), color-stop(70.31%, rgba(38, 27, 15, 0.71875)), to(rgba(38, 27, 15, 0)));
+  background: linear-gradient(180deg, #261B0F 0%, rgba(38, 27, 15, 0.785582) 42.19%, rgba(38, 27, 15, 0.71875) 70.31%, rgba(38, 27, 15, 0) 100%);
+  z-index: 10;
+}
+
+.home-page-dots {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 20%;
+          flex: 0 1 20%;
+}
+
+.home-page-dots .slick-dots {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-page-dots .slick-dots li {
+  display: block;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background-color: #B2ACA6;
+  margin: 0 35px;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
+}
+
+.home-page-dots .slick-dots li.slick-active {
+  background-color: transparent;
+}
+
+.home-page-dots .slick-dots li button {
+  font-size: 0;
 }
 /*# sourceMappingURL=style.css.map */
