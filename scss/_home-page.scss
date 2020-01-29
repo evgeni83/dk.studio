@@ -13,6 +13,7 @@
   }
 
   &-wrapper {
+    position: relative;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -46,7 +47,7 @@
   &__link {
     font-weight: bold;
     text-transform: uppercase;
-    background-image: url(../img/icons/right-arrow-icon.png);
+    background-image: url(../img/icons/eye-icon.png);
     background-repeat: no-repeat;
     background-position: 99% 50%;
     padding-right: 30px;
@@ -88,9 +89,38 @@
     left: 0;
     width: 100%;
     height: 100%;
-    // background-color: yellow;
-    background: linear-gradient(180deg, #261B0F 0%, rgba(38, 27, 15, 0.785582) 42.19%, rgba(38, 27, 15, 0.71875) 70.31%, rgba(38, 27, 15, 0) 100%);
+    background: linear-gradient(
+      180deg,
+      #261b0f 0%,
+      rgba(38, 27, 15, 0.785582) 42.19%,
+      rgba(38, 27, 15, 0.71875) 70.31%,
+      rgba(38, 27, 15, 0) 100%
+    );
     z-index: 10;
+  }
+
+  &-arrows {
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    z-index: 60;
+
+    /* Стрелка */
+    .slick-arrow {
+      font-size: 0;
+      width: 40px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-image: url(../img/icons/right-arrow-icon.png);
+      background-size: contain;
+    }
+    .slick-arrow.slick-next {
+      transform: rotate(180deg);
+      margin-top: 50px;
+    }
   }
 }
 
@@ -106,19 +136,63 @@
   }
 
   .slick-dots li {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 130px;
     height: 130px;
     border-radius: 50%;
-    border: 1px solid $white;
-    background-color: $main-color;
+    border: 2px solid $white;
     margin: 0 35px;
-    transition: background-color 1s;
+    overflow: hidden;
+
+    & button {
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      opacity: 1;
+      transition: opacity 0.5s;
+    }
+
+    &:nth-child(1) button {
+      background-image: url(../img/82_003.jpg);
+    }
+    &:nth-child(2) button {
+      background-image: url(../img/97_002.jpg);
+    }
+    &:nth-child(3) button {
+      background-image: url(../img/69_02.jpg);
+    }
   }
-  .slick-dots li.slick-active {
-    background-color: transparent;
+
+  & .slick-dots li.slick-active button {
+    opacity: 0;
   }
   .slick-dots li button {
     font-size: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-page-main__title {
+    font-size: 40px;
+    line-height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page-main__title {
+    font-size: 24px;
+    line-height: 27px;
+  }
+  .home-page-slider {
+    &-arrows {
+      .slick-arrow {
+        width: 30px;
+        height: 30px;
+      }
+    }
   }
 }
