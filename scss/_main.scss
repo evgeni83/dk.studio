@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plumb", Arial, Helvetica, sans-serif;
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+button {
+  display: block;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.round-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.page-wrapper {
+  height: 100vh;
+  background-color: black;
+}

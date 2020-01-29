@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Athelas-Bold';
+  src: url('Athelas-Bold.eot');
+  src: url('Athelas-Bold.eot?#iefix') format('embedded-opentype'),
+       url('Athelas-Bold.svg#Athelas-Bold') format('svg'),
+       url('Athelas-Bold.ttf') format('truetype'),
+       url('Athelas-Bold.woff') format('woff'),
+       url('Athelas-Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Athelas-BoldItalic';
+  src: url('Athelas-BoldItalic.eot');
+  src: url('Athelas-BoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('Athelas-BoldItalic.svg#Athelas-BoldItalic') format('svg'),
+       url('Athelas-BoldItalic.ttf') format('truetype'),
+       url('Athelas-BoldItalic.woff') format('woff'),
+       url('Athelas-BoldItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Athelas-Italic';
+  src: url('Athelas-Italic.eot');
+  src: url('Athelas-Italic.eot?#iefix') format('embedded-opentype'),
+       url('Athelas-Italic.svg#Athelas-Italic') format('svg'),
+       url('Athelas-Italic.ttf') format('truetype'),
+       url('Athelas-Italic.woff') format('woff'),
+       url('Athelas-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Athelas-Regular';
+  src: url('Athelas-Regular.eot');
+  src: url('Athelas-Regular.eot?#iefix') format('embedded-opentype'),
+       url('Athelas-Regular.svg#Athelas-Regular') format('svg'),
+       url('Athelas-Regular.ttf') format('truetype'),
+       url('Athelas-Regular.woff') format('woff'),
+       url('Athelas-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

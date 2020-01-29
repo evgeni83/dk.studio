@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Plumb-Regular';
+  src: url('Plumb-Regular.eot');
+  src: url('Plumb-Regular.eot?#iefix') format('embedded-opentype'),
+       url('Plumb-Regular.svg#Plumb-Regular') format('svg'),
+       url('Plumb-Regular.ttf') format('truetype'),
+       url('Plumb-Regular.woff') format('woff'),
+       url('Plumb-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Plumb-Light';
+  src: url('Plumb-Light.eot');
+  src: url('Plumb-Light.eot?#iefix') format('embedded-opentype'),
+       url('Plumb-Light.svg#Plumb-Light') format('svg'),
+       url('Plumb-Light.ttf') format('truetype'),
+       url('Plumb-Light.woff') format('woff'),
+       url('Plumb-Light.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

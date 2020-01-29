@@ -1,0 +1,195 @@
+@font-face {
+  font-family: "Athelas";
+  src: url("../fonts/Athelas/Athelas-Bold.eot");
+  src: url("../fonts/Athelas/Athelas-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Athelas/Athelas-Bold.svg#Athelas-Bold") format("svg"), url("../fonts/Athelas/Athelas-Bold.ttf") format("truetype"), url("../fonts/Athelas/Athelas-Bold.woff") format("woff"), url("../fonts/Athelas/Athelas-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Athelas";
+  src: url("../fonts/Athelas/Athelas-Italic.eot");
+  src: url("../fonts/Athelas/Athelas-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Athelas/Athelas-Italic.svg#Athelas-Italic") format("svg"), url("../fonts/Athelas/Athelas-Italic.ttf") format("truetype"), url("../fonts/Athelas/Athelas-Italic.woff") format("woff"), url("../fonts/Athelas/Athelas-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Plumb";
+  src: url("../fonts/Plumb-Light/Plumb-Light.eot");
+  src: url("../fonts/Plumb-Light/Plumb-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Plumb-Light/Plumb-Light.svg#Plumb-Light") format("svg"), url("../fonts/Plumb-Light/Plumb-Light.ttf") format("truetype"), url("../fonts/Plumb-Light/Plumb-Light.woff") format("woff"), url("../fonts/Plumb-Light/Plumb-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Plumb";
+  src: url("../fonts/Plumb-Regular/Plumb-Regular.eot");
+  src: url("../fonts/Plumb-Regular/Plumb-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Plumb-Regular/Plumb-Regular.svg#Plumb-Regular") format("svg"), url("../fonts/Plumb-Regular/Plumb-Regular.ttf") format("truetype"), url("../fonts/Plumb-Regular/Plumb-Regular.woff") format("woff"), url("../fonts/Plumb-Regular/Plumb-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Plumb";
+  src: url("../fonts/Plumb-Medium/Plumb-Medium.eot");
+  src: url("../fonts/Plumb-Medium/Plumb-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Plumb-Medium/Plumb-Medium.svg#Plumb-Medium") format("svg"), url("../fonts/Plumb-Medium/Plumb-Medium.ttf") format("truetype"), url("../fonts/Plumb-Medium/Plumb-Medium.woff") format("woff"), url("../fonts/Plumb-Medium/Plumb-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Plumb";
+  src: url("../fonts/Plumb-Bold/Plumb-Bold.eot");
+  src: url("../fonts/Plumb-Bold/Plumb-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Plumb-Bold/Plumb-Bold.svg#Plumb-Bold") format("svg"), url("../fonts/Plumb-Bold/Plumb-Bold.ttf") format("truetype"), url("../fonts/Plumb-Bold/Plumb-Bold.woff") format("woff"), url("../fonts/Plumb-Bold/Plumb-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Plumb";
+  src: url("../fonts/Plumb-Black/Plumb-Black.eot");
+  src: url("../fonts/Plumb-Black/Plumb-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Plumb-Black/Plumb-Black.svg#Plumb-Black") format("svg"), url("../fonts/Plumb-Black/Plumb-Black.ttf") format("truetype"), url("../fonts/Plumb-Black/Plumb-Black.woff") format("woff"), url("../fonts/Plumb-Black/Plumb-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Plumb", Arial, Helvetica, sans-serif;
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+button {
+  display: block;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.round-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.page-wrapper {
+  height: 100vh;
+  background-color: black;
+}
+
+.header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 44px;
+}
+
+.header-left {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 330px;
+          flex: 0 1 330px;
+}
+
+.header-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 265px;
+          flex: 0 1 265px;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logo__title, .logo__subtitle {
+  color: #B2ACA6;
+  font-family: "Athelas", serif;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.logo__title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 11px;
+}
+
+.logo__subtitle {
+  font-size: 12px;
+  font-style: italic;
+  letter-spacing: 5px;
+}
+
+.btn-personal-account, .btn-phone-book {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.btn-personal-account {
+  background-image: url(../img/icons/personal-account-icon.png);
+}
+
+.btn-phone-book {
+  background-image: url(../img/icons/phone-book-icon.png);
+}
+
+.btn-change-lang, .btn-menu {
+  text-transform: uppercase;
+  color: #B2ACA6;
+  font-size: 18px;
+}
+
+.btn-change-lang {
+  font-weight: 700;
+  border-bottom: 1px solid #B2ACA6;
+}
+
+.btn-menu {
+  font-weight: 500;
+  background-image: url(../img/icons/arrow-menu-icon.png);
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  padding-right: 25px;
+}
+/*# sourceMappingURL=style.css.map */
