@@ -62,12 +62,19 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Plumb", Arial, Helvetica, sans-serif;
+  color: #B2ACA6;
   cursor: default;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+html,
+body {
+  min-width: 320px;
 }
 
 a {
   text-decoration: none;
-  color: #000;
 }
 
 button {
@@ -76,6 +83,10 @@ button {
   outline: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
 
 .round-btn {
@@ -95,6 +106,17 @@ button {
   background-color: black;
 }
 
+/* Landscape tablets and medium desktops */
+@media (max-width: 1199px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets */
+/* Portrait phones and smaller */
+/* Iphone 5 */
 .header-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -136,13 +158,13 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+.logo-left {
+  margin-right: 16px;
 }
 
 .logo__title, .logo__subtitle {
-  color: #B2ACA6;
   font-family: "Athelas", serif;
   line-height: 24px;
   text-transform: uppercase;
@@ -191,5 +213,78 @@ button {
   background-repeat: no-repeat;
   background-position: 100% 50%;
   padding-right: 25px;
+}
+
+.btn-burger {
+  display: none;
+}
+
+.btn-burger__item::before, .btn-burger__item::after {
+  content: "";
+}
+
+.btn-burger__item, .btn-burger__item::before, .btn-burger__item::after {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #B2ACA6;
+  position: relative;
+}
+
+.btn-burger__item::before {
+  bottom: 6px;
+}
+
+.btn-burger__item::after {
+  top: 4px;
+}
+
+/* Landscape tablets and medium desktops */
+@media (max-width: 1199px) {
+  .header-wrapper {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .header-right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50px;
+            flex: 0 1 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    height: 170px;
+  }
+  .btn-phone-book {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .btn-menu {
+    display: none;
+  }
+  .btn-burger {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo__img {
+    height: 52px;
+  }
+  .logo__title {
+    font-size: 12px;
+    letter-spacing: 7px;
+    line-height: 16px;
+  }
+  .logo__subtitle {
+    font-size: 6px;
+    letter-spacing: 3.5px;
+    line-height: 16px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

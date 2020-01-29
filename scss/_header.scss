@@ -21,11 +21,13 @@
 .logo {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
+  &-left {
+    margin-right: 16px;
+  }
 
   &__title,
   &__subtitle {
-    color: $main-color;
     font-family: "Athelas", serif;
     line-height: 24px;
     text-transform: uppercase;
@@ -41,7 +43,6 @@
     font-size: 12px;
     font-style: italic;
     letter-spacing: 5px;
-
   }
 }
 
@@ -79,5 +80,78 @@
     background-repeat: no-repeat;
     background-position: 100% 50%;
     padding-right: 25px;
+  }
+
+  &-burger {
+    display: none;
+    &__item::before,
+    &__item::after {
+      content: "";
+    }
+
+    &__item,
+    &__item::before,
+    &__item::after {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background-color: $main-color;
+      position: relative;
+    }
+
+    &__item::before {
+      bottom: 6px;
+    }
+
+    &__item::after {
+      top: 4px;
+    }
+  }
+}
+
+/* Landscape tablets and medium desktops */
+@media (max-width: 1199px) {
+  .header {
+    &-wrapper {
+      align-items: flex-start;
+    }
+
+    &-right {
+      flex: 0 1 50px;
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      height: 170px;
+    }
+  }
+
+  .btn {
+    &-phone-book {
+      order: -1;
+    }
+    &-menu {
+      display: none;
+    }
+    &-burger {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    &__img {
+      height: 52px;
+    }
+    &__title {
+      font-size: 12px;
+      letter-spacing: 7px;
+      line-height: 16px;
+    }
+
+    &__subtitle {
+      font-size: 6px;
+      letter-spacing: 3.5px;
+      line-height: 16px;
+    }
   }
 }

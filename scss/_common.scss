@@ -5,12 +5,18 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Plumb", Arial, Helvetica, sans-serif;
+  color: $main-color;
   cursor: default;
+  transition: all 0.5s;
+}
+
+html,
+body {
+  min-width: 320px;
 }
 
 a {
   text-decoration: none;
-  color: #000;
 }
 
 button {
@@ -19,6 +25,10 @@ button {
   outline: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
 
 .round-btn {
@@ -36,4 +46,33 @@ button {
 .page-wrapper {
   height: 100vh;
   background-color: black;
+}
+
+
+
+/* Landscape tablets and medium desktops */
+@media (max-width: 1199px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+/* Portrait tablets and small desktops */
+@media (max-width: 991px) {
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+}
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+
 }
