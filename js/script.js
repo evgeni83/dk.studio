@@ -7,7 +7,7 @@ $(document).ready(function() {
   );
 
   $(".home-page-dots__btn").each(function(i, elem) {
-    var imgPath = $(elem).data("img")
+    var imgPath = $(elem).data("img");
     $(elem).css("background-image", `url(${imgPath})`);
   });
 
@@ -40,7 +40,9 @@ $(document).ready(function() {
     }
 
     $(".home-page-dots__item").removeClass("active");
-    $(e.currentTarget).parent().addClass("active");
+    $(e.currentTarget)
+      .parent()
+      .addClass("active");
 
     var xClick =
       $(e.target)
@@ -73,7 +75,7 @@ $(document).ready(function() {
         left: -500,
         top: -500,
         right: -500,
-        bottom: -500,
+        bottom: -500
       },
       {
         duration: 1000,
@@ -92,5 +94,27 @@ $(document).ready(function() {
     );
 
     $(".home-page-slider__item:not(:last-child)").removeAttr("style");
+  });
+
+  $(".home-page-slider-arrow:first-child").click(function(e) {
+    $(".home-page-slider__item:first-child").css({
+      left: "-100%",
+      right: "unset"
+    });
+    $(".home-page-slider").append($(".home-page-slider__item:first-child"));
+    $(".home-page-slider__item:last-child").animate({
+      left: 0
+    });
+  });
+
+  $(".home-page-slider-arrow:last-child").click(function(e) {
+    $(".home-page-slider__item:first-child").css({
+      right: "-100%",
+      left: "unset"
+    });
+    $(".home-page-slider").append($(".home-page-slider__item:first-child"));
+    $(".home-page-slider__item:last-child").animate({
+      right: 0
+    });
   });
 });
