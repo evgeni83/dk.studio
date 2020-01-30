@@ -64,7 +64,6 @@
           box-sizing: border-box;
   font-family: "Plumb", Arial, Helvetica, sans-serif;
   color: #B2ACA6;
-  cursor: default;
   z-index: 50;
 }
 
@@ -367,8 +366,8 @@ button {
   position: absolute;
   left: 0;
   top: 0;
-  height: 100%;
-  width: 100%;
+  bottom: 0;
+  right: 0;
   z-index: 0;
 }
 
@@ -400,11 +399,10 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(#261b0f), color-stop(42.19%, rgba(38, 27, 15, 0.785582)), color-stop(70.31%, rgba(38, 27, 15, 0.71875)), to(rgba(38, 27, 15, 0)));
   background: linear-gradient(180deg, #261b0f 0%, rgba(38, 27, 15, 0.785582) 42.19%, rgba(38, 27, 15, 0.71875) 70.31%, rgba(38, 27, 15, 0) 100%);
-  z-index: 10;
 }
 
 .home-page-slider-arrows {

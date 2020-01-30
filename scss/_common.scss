@@ -6,7 +6,7 @@
   box-sizing: border-box;
   font-family: "Plumb", Arial, Helvetica, sans-serif;
   color: $main-color;
-  cursor: default;
+  // cursor: default;
   z-index: 50;
 }
 
@@ -17,6 +17,7 @@ body {
 
 a {
   text-decoration: none;
+  // cursor: pointer;
 }
 
 button {
