@@ -26,6 +26,10 @@ button {
   outline: none;
   background-color: transparent;
   cursor: pointer;
+
+  &:active {
+    outline: none;
+  }
 }
 
 .hidden {

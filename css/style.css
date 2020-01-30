@@ -83,6 +83,10 @@ button {
   cursor: pointer;
 }
 
+button:active {
+  outline: none;
+}
+
 .hidden {
   display: none;
 }
@@ -439,19 +443,42 @@ button {
   margin: 0 35px;
   border-radius: 50%;
   border: 3px solid #B2ACA6;
+  -webkit-box-shadow: 0px 0px 0px 0px #B2ACA6;
+          box-shadow: 0px 0px 0px 0px #B2ACA6;
   overflow: hidden;
-  -webkit-transition: border 1s;
-  transition: border 1s;
+  -webkit-transition: border 0.5s, -webkit-box-shadow 0.3s;
+  transition: border 0.5s, -webkit-box-shadow 0.3s;
+  transition: border 0.5s, box-shadow 0.3s;
+  transition: border 0.5s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
+}
+
+.home-page-dots__item:hover {
+  border: 3px solid rgba(178, 172, 166, 0.5);
+  -webkit-box-shadow: 0px 0px 20px 0px #B2ACA6;
+          box-shadow: 0px 0px 20px 0px #B2ACA6;
 }
 
 .home-page-dots__item.active {
-  border: 3px solid #fff;
+  border: 3px solid transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .home-page-dots__btn {
   width: 100vw;
   height: 100vh;
   background-repeat: no-repeat;
+}
+
+.home-page-dots__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#261b0f), color-stop(42.19%, rgba(38, 27, 15, 0.785582)), color-stop(70.31%, rgba(38, 27, 15, 0.71875)), to(rgba(38, 27, 15, 0)));
+  background: linear-gradient(180deg, #261b0f 0%, rgba(38, 27, 15, 0.785582) 42.19%, rgba(38, 27, 15, 0.71875) 70.31%, rgba(38, 27, 15, 0) 100%);
 }
 
 @media (max-width: 767px) {

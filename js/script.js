@@ -68,13 +68,12 @@ $(document).ready(function() {
     $(".home-page-slider").append($(targetSlide));
 
     $(targetSlide).offset({ top: yClick, left: xClick });
-
     $(targetSlide).animate(
       {
         left: -500,
         top: -500,
         right: -500,
-        bottom: -500
+        bottom: -500,
       },
       {
         duration: 1000,
