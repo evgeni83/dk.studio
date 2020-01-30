@@ -297,6 +297,9 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-bottom: 50px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 .home-page-main {
@@ -377,13 +380,8 @@ button {
 
 .home-page-slider__item {
   position: absolute;
-  left: 25%;
-  top: 25%;
-  border: 3px solid #fff;
   border-radius: 50%;
   overflow: hidden;
-  height: 50%;
-  width: 50%;
 }
 
 .home-page-slider__img {
@@ -436,18 +434,24 @@ button {
 }
 
 .home-page-dots__item {
-  height: 50px;
-  width: 50px;
-  margin: 0 20px;
+  height: 130px;
+  width: 130px;
+  margin: 0 35px;
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 3px solid #B2ACA6;
   overflow: hidden;
+  -webkit-transition: border 1s;
+  transition: border 1s;
+}
+
+.home-page-dots__item.active {
+  border: 3px solid #fff;
 }
 
 .home-page-dots__btn {
-  width: 100%;
-  height: 100%;
-  background-color: blue;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 767px) {
