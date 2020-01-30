@@ -56,41 +56,57 @@
 
 .home-page-slider {
   min-width: 0;
+  height: 100%;
+  width: 100%;
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
   right: 0;
-  // height: 100%;
-  // width: 100%;
   z-index: 0;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
 
   &__item {
-    position: relative;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    // height: 100%;
+    // width: 100%;
+
+    // position: relative;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 50%;
+    width: 50%;
+    // background-color: red;
   }
 
   &__img {
-    height: 100%;
-    width: 100%;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
   }
 
-  .slick-list {
-    overflow: hidden;
-    height: 100%;
-  }
-  .slick-track {
-    display: flex;
-    height: 100%;
-  }
+  // .slick-list {
+  //   overflow: hidden;
+  //   height: 100%;
+  // }
+  // .slick-track {
+  //   display: flex;
+  //   height: 100%;
+  // }
 
   &::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    // width: 100%;
-    // height: 100%;
     right: 0;
     bottom: 0;
     background: linear-gradient(
@@ -100,7 +116,6 @@
       rgba(38, 27, 15, 0.71875) 70.31%,
       rgba(38, 27, 15, 0) 100%
     );
-    // z-index: 10;
   }
 
   &-arrows {
@@ -111,72 +126,89 @@
     flex-direction: column;
     z-index: 60;
 
-    /* Стрелка */
-    .slick-arrow {
-      font-size: 0;
-      width: 40px;
-      height: 40px;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-image: url(../img/icons/right-arrow-icon.png);
-      background-size: contain;
-    }
-    .slick-arrow.slick-next {
-      transform: rotate(180deg);
-      margin-top: 50px;
-    }
+    // .slick-arrow {
+    //   font-size: 0;
+    //   width: 40px;
+    //   height: 40px;
+    //   background-repeat: no-repeat;
+    //   background-position: 50% 50%;
+    //   background-image: url(../img/icons/right-arrow-icon.png);
+    //   background-size: contain;
+    // }
+    // .slick-arrow.slick-next {
+    //   transform: rotate(180deg);
+    //   margin-top: 50px;
+    // }
   }
 }
 
 .home-page-dots {
   position: relative;
   flex: 0 1 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  .slick-dots {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .slick-dots li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 130px;
-    height: 130px;
+  &__item {
+    height: 50px;
+    width: 50px;
+    margin: 0 20px;
     border-radius: 50%;
-    border: 2px solid $white;
-    margin: 0 35px;
+    border: 2px solid #fff;
     overflow: hidden;
-
-    & button {
-      height: 100%;
-      width: 100%;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: cover;
-      opacity: 1;
-      transition: opacity 0.5s;
-    }
-
-    &:nth-child(1) button {
-      background-image: url(../img/82_003.jpg);
-    }
-    &:nth-child(2) button {
-      background-image: url(../img/97_002.jpg);
-    }
-    &:nth-child(3) button {
-      background-image: url(../img/69_02.jpg);
-    }
   }
 
-  & .slick-dots li.slick-active button {
-    opacity: 0;
+  &__btn {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
   }
-  .slick-dots li button {
-    font-size: 0;
-  }
+
+  // .slick-dots {
+  //   list-style: none;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  // }
+
+  // .slick-dots li {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   width: 130px;
+  //   height: 130px;
+  //   border-radius: 50%;
+  //   border: 2px solid $white;
+  //   margin: 0 35px;
+  //   overflow: hidden;
+
+  //   & button {
+  //     height: 100%;
+  //     width: 100%;
+  //     background-repeat: no-repeat;
+  //     background-position: 50% 50%;
+  //     background-size: cover;
+  //     opacity: 1;
+  //     transition: opacity 0.5s;
+  //   }
+
+  //   &:nth-child(1) button {
+  //     background-image: url(../img/82_003.jpg);
+  //   }
+  //   &:nth-child(2) button {
+  //     background-image: url(../img/97_002.jpg);
+  //   }
+  //   &:nth-child(3) button {
+  //     background-image: url(../img/69_02.jpg);
+  //   }
+  // }
+
+  // & .slick-dots li.slick-active button {
+  //   opacity: 0;
+  // }
+  // .slick-dots li button {
+  //   font-size: 0;
+  // }
 }
 
 @media (max-width: 767px) {

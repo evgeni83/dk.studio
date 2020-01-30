@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Athelas";
   src: url("../fonts/Athelas/Athelas-Bold.eot");
@@ -103,7 +102,6 @@ button {
 .page-wrapper {
   position: relative;
   height: 100vh;
-  background-color: black;
 }
 
 /* Landscape tablets and medium desktops */
@@ -363,35 +361,37 @@ button {
 
 .home-page-slider {
   min-width: 0;
+  height: 100%;
+  width: 100%;
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
   right: 0;
   z-index: 0;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 .home-page-slider__item {
-  position: relative;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 50%;
+  width: 50%;
 }
 
 .home-page-slider__img {
-  height: 100%;
-  width: 100%;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.home-page-slider .slick-list {
-  overflow: hidden;
-  height: 100%;
-}
-
-.home-page-slider .slick-track {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
 }
 
 .home-page-slider::after {
@@ -417,23 +417,6 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   z-index: 60;
-  /* Стрелка */
-}
-
-.home-page-slider-arrows .slick-arrow {
-  font-size: 0;
-  width: 40px;
-  height: 40px;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-image: url(../img/icons/right-arrow-icon.png);
-  background-size: contain;
-}
-
-.home-page-slider-arrows .slick-arrow.slick-next {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  margin-top: 50px;
 }
 
 .home-page-dots {
@@ -441,10 +424,6 @@ button {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 20%;
           flex: 0 1 20%;
-}
-
-.home-page-dots .slick-dots {
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -456,53 +435,19 @@ button {
           justify-content: center;
 }
 
-.home-page-dots .slick-dots li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 130px;
-  height: 130px;
+.home-page-dots__item {
+  height: 50px;
+  width: 50px;
+  margin: 0 20px;
   border-radius: 50%;
   border: 2px solid #fff;
-  margin: 0 35px;
   overflow: hidden;
 }
 
-.home-page-dots .slick-dots li button {
-  height: 100%;
+.home-page-dots__btn {
   width: 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
-  opacity: 1;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
-}
-
-.home-page-dots .slick-dots li:nth-child(1) button {
-  background-image: url(../img/82_003.jpg);
-}
-
-.home-page-dots .slick-dots li:nth-child(2) button {
-  background-image: url(../img/97_002.jpg);
-}
-
-.home-page-dots .slick-dots li:nth-child(3) button {
-  background-image: url(../img/69_02.jpg);
-}
-
-.home-page-dots .slick-dots li.slick-active button {
-  opacity: 0;
-}
-
-.home-page-dots .slick-dots li button {
-  font-size: 0;
+  height: 100%;
+  background-color: blue;
 }
 
 @media (max-width: 767px) {
