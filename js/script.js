@@ -29,7 +29,8 @@ $(document).ready(function() {
   });
 
   $(document).click(function(e) {
-    if ($(e.target).hasClass("btn-contacts")) {
+    console.log(e.target);
+    if ($(e.target)[0] == $(".btn-contacts")[0]) {
       $(".contacts-container").toggleClass("active");
       $(".contacts-item").toggleClass("active");
       $(".header-nav-menu").removeClass("active");
@@ -39,12 +40,18 @@ $(document).ready(function() {
       return;
     }
 
-    if ($(e.target).hasClass("btn-menu")) {
+    if (
+      $(e.target)[0] == $(".btn-menu")[0] ||
+      $(e.target).parent()[0] == $(".btn-menu")[0]
+    ) {
       openMenu();
       return;
     }
 
-    if ($(e.target).hasClass("btn-burger")) {
+    if (
+      $(e.target).hasClass("btn-burger") ||
+      $(e.target).parent()[0] == $(".btn-burger")[0]
+    ) {
       openMenu();
       return;
     }

@@ -114,7 +114,6 @@
 
   &-contacts {
     background-image: url(../img/icons/phone-book-icon.png);
-    // position: relative;
     z-index: 20;
   }
 
@@ -380,7 +379,7 @@
 
   .header-nav-menu {
     right: -30px;
-    top: 120%;
+    top: 110%;
 
     &__list {
       right: auto;
@@ -388,7 +387,6 @@
     }
 
     &__item {
-      // background: rgba(19, 12, 7, 0.5);
       background: linear-gradient(
         90deg,
         rgba(19, 12, 7, 0) 0%,
@@ -402,8 +400,8 @@
     }
 
     &__link {
-      height: 12vh;
-      line-height: 12vh;
+      height: 11vh;
+      line-height: 11vh;
       padding-left: 0;
       text-align: center;
     }

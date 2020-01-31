@@ -69,6 +69,7 @@ html,
 body {
   min-width: 320px;
   min-height: 320px;
+  background-color: #5A4E44;
 }
 
 a {
@@ -565,7 +566,7 @@ button:active {
   }
   .header-nav-menu {
     right: -30px;
-    top: 120%;
+    top: 110%;
   }
   .header-nav-menu__list {
     right: auto;
@@ -579,8 +580,8 @@ button:active {
     background: rgba(19, 12, 7, 0.8);
   }
   .header-nav-menu__link {
-    height: 12vh;
-    line-height: 12vh;
+    height: 11vh;
+    line-height: 11vh;
     padding-left: 0;
     text-align: center;
   }
@@ -814,6 +815,9 @@ button:active {
 }
 
 @media (max-width: 767px) {
+  .home-page-page-wrapper {
+    padding-bottom: 100px;
+  }
   .home-page-main {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 55%;
