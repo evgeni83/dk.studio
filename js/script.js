@@ -35,6 +35,7 @@ $(document).ready(function() {
       $(".contacts-item").toggleClass("active");
       $(".header-nav-menu").removeClass("active");
       $(".home-page-main").removeClass("hidden");
+      $(".cap-page-main").removeClass("hidden");
       $(".btn-menu span").removeClass("active");
       $(".btn-burger__item").removeClass("active");
       return;
@@ -150,6 +151,7 @@ $(document).ready(function() {
   function closeAll() {
     $(".header-nav-menu").removeClass("active");
     $(".home-page-main").removeClass("hidden");
+    $(".cap-page-main").removeClass("hidden");
     $(".btn-menu span").removeClass("active");
     $(".btn-burger__item").removeClass("active");
     $(".contacts-container").removeClass("active");
@@ -160,10 +162,12 @@ $(document).ready(function() {
     $(".header-nav-menu").toggleClass("active");
     if ($(".header-nav-menu").hasClass("active")) {
       $(".home-page-main").addClass("hidden");
+      $(".cap-page-main").addClass("hidden");
       $(".btn-menu span").addClass("active");
       $(".btn-burger__item").addClass("active");
     } else {
       $(".home-page-main").removeClass("hidden");
+      $(".cap-page-main").removeClass("hidden");
       $(".btn-menu span").removeClass("active");
       $(".btn-burger__item").removeClass("active");
     }
