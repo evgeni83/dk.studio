@@ -119,5 +119,27 @@ $(document).ready(function() {
   $(".btn-contacts").click(function () {
     $(".contacts-container").toggleClass("active");
     $(".contacts-item").toggleClass("active");
+    $(".header-nav-menu").removeClass("active");
+    $(".home-page-main").removeClass("hidden");
+  })
+
+  function openMenu () {
+    $(".header-nav-menu").toggleClass("active");
+    if ($(".header-nav-menu").hasClass("active")) {
+      $(".home-page-main").addClass("hidden");
+    } else {
+      $(".home-page-main").removeClass("hidden");
+    }
+    $(".contacts-container").removeClass("active");
+    $(".contacts-item").removeClass("active");
+  }
+
+  $(".btn-menu").click(function () {
+    openMenu();
+
+  })
+
+  $(".btn-burger").click(function () {
+    openMenu();
   })
 });
