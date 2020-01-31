@@ -1,4 +1,5 @@
 .header {
+  z-index: 50;
   &-wrapper {
     display: flex;
     align-items: center;
@@ -15,6 +16,8 @@
     align-items: center;
     justify-content: space-between;
     flex: 0 1 265px;
+    position: relative;
+    padding: 15px 0;
   }
 }
 
@@ -48,7 +51,7 @@
 
 .btn {
   &-personal-account,
-  &-phone-book {
+  &-contacts {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
@@ -58,8 +61,10 @@
     background-image: url(../img/icons/personal-account-icon.png);
   }
 
-  &-phone-book {
+  &-contacts {
     background-image: url(../img/icons/phone-book-icon.png);
+    // position: relative;
+    z-index: 20;
   }
 
   &-change-lang,
@@ -109,6 +114,97 @@
   }
 }
 
+.contacts {
+  &-container {
+    position: absolute;
+    right: auto;
+    left: 54px;
+    top: 5px;
+    background: linear-gradient(
+      190deg,
+      rgba(149, 139, 128, 0.4) 0%,
+      rgba(38, 27, 15, 0.7) 100%
+    );
+    width: 52px;
+    height: 50px;
+    border-radius: 100px;
+    opacity: 0;
+    transition-property: height, opacity;
+    transition-duration: 0.5s, 0.5s;
+    transition-delay: 0s, 0.5s;
+    transition-timing-function: linear, ease;
+
+    &.active {
+      height: 276px;
+      opacity: 1;
+      transition-duration: 0.5s, 0s;
+      transition-delay: 0s, 0s;
+    }
+  }
+
+  &-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 32px;
+    width: 32px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin: 10px;
+    transition-property: top;
+    transition-timing-function: linear;
+
+    &:nth-child(1) {
+      background-image: url(../img/icons/call-icon.png);
+      transition-duration: 0.1s;
+      transition-delay: 0.4s;
+    }
+    &:nth-child(2) {
+      background-image: url(../img/icons/email-icon.png);
+      transition-duration: 0.2s;
+      transition-delay: 0.3s;
+    }
+    &:nth-child(3) {
+      background-image: url(../img/icons/instagram-icon.png);
+      transition-duration: 0.3s;
+      transition-delay: 0.2s;
+    }
+    &:nth-child(4) {
+      background-image: url(../img/icons/telegram.png);
+      transition-duration: 0.4s;
+      transition-delay: 0.1s;
+    }
+    &:nth-child(5) {
+      background-image: url(../img/icons/whatsapp-icon.png);
+      transition-duration: 0.5s;
+      transition-delay: 0s;
+    }
+
+    &.active {
+      &:nth-child(1) {
+        top: 45px;
+        transition-delay: 0s;
+      }
+      &:nth-child(2) {
+        top: 90px;
+        transition-delay: 0s;
+      }
+      &:nth-child(3) {
+        top: 135px;
+        transition-delay: 0s;
+      }
+      &:nth-child(4) {
+        top: 180px;
+        transition-delay: 0s;
+      }
+      &:nth-child(5) {
+        top: 225px;
+        transition-delay: 0s;
+      }
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .header {
     &-wrapper {
@@ -124,7 +220,7 @@
   }
 
   .btn {
-    &-phone-book {
+    &-contacts {
       order: -1;
     }
     &-menu {
@@ -132,6 +228,83 @@
     }
     &-burger {
       display: block;
+    }
+  }
+
+  .contacts {
+    &-container {
+      left: unset;
+      right: -10px;
+      top: 115px;
+      transition-property: width, opacity;
+      // transition-duration: 0.5s, 0.5s;
+      // transition-delay: 0s, 0.5s;
+      // transition-timing-function: linear, ease;
+
+      &.active {
+        height: 50px;
+        width: 276px;
+      }
+    }
+    &-item {
+      left: auto;
+      right: 0;
+      transition-property: right;
+
+      &:nth-child(1) {
+        transition-duration: 0.1s;
+        transition-delay: 0.4s;
+      }
+      &:nth-child(2) {
+        transition-duration: 0.2s;
+        transition-delay: 0.3s;
+      }
+      &:nth-child(3) {
+        transition-duration: 0.3s;
+        transition-delay: 0.2s;
+      }
+      &:nth-child(4) {
+        transition-duration: 0.4s;
+        transition-delay: 0.1s;
+      }
+      &:nth-child(5) {
+        transition-duration: 0.5s;
+        transition-delay: 0s;
+      }
+
+      &.active {
+
+        &:nth-child(1) {
+          top: 0;
+          right: 45px;
+          transition-delay: 0s;
+
+        }
+        &:nth-child(2) {
+          top: 0;
+          right: 90px;
+          transition-delay: 0s;
+
+        }
+        &:nth-child(3) {
+          top: 0;
+          right: 135px;
+          transition-delay: 0s;
+
+        }
+        &:nth-child(4) {
+          top: 0;
+          right: 180px;
+          transition-delay: 0s;
+
+        }
+        &:nth-child(5) {
+          top: 0;
+          right: 225px;
+          transition-delay: 0s;
+
+        }
+      }
     }
   }
 }

@@ -7,13 +7,14 @@
   font-family: "Plumb", Arial, Helvetica, sans-serif;
   color: $main-color;
   // cursor: default;
-  z-index: 50;
+  // z-index: 50;
 }
 
 html,
 body {
   min-width: 320px;
   min-height: 320px;
+  // background: #5A4E44;
 }
 
 a {

@@ -10,6 +10,7 @@
 
 .home-page-main {
   flex: 0 1 330px;
+  z-index: 10;
 
   .container {
     height: 100%;
@@ -133,6 +134,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 
   &__item {
     height: 130px;
@@ -144,7 +146,7 @@
     transition: border 0.5s, box-shadow 0.3s;
 
     &:hover {
-      border: 3px solid rgba(178, 172, 166, 0.5);
+      border: 3px solid rgba(178, 172, 166, 0.2);
     }
 
     &.active {

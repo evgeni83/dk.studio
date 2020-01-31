@@ -63,7 +63,6 @@
           box-sizing: border-box;
   font-family: "Plumb", Arial, Helvetica, sans-serif;
   color: #B2ACA6;
-  z-index: 50;
 }
 
 html,
@@ -120,6 +119,10 @@ button:active {
 /* Landscape phones and portrait tablets */
 /* Portrait phones and smaller */
 /* Iphone 5 */
+.header {
+  z-index: 50;
+}
+
 .header-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,6 +155,8 @@ button:active {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 265px;
           flex: 0 1 265px;
+  position: relative;
+  padding: 15px 0;
 }
 
 .logo {
@@ -185,7 +190,7 @@ button:active {
   letter-spacing: 5px;
 }
 
-.btn-personal-account, .btn-phone-book {
+.btn-personal-account, .btn-contacts {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
@@ -195,8 +200,9 @@ button:active {
   background-image: url(../img/icons/personal-account-icon.png);
 }
 
-.btn-phone-book {
+.btn-contacts {
   background-image: url(../img/icons/phone-book-icon.png);
+  z-index: 20;
 }
 
 .btn-change-lang, .btn-menu {
@@ -242,6 +248,120 @@ button:active {
   top: 4px;
 }
 
+.contacts-container {
+  position: absolute;
+  right: auto;
+  left: 54px;
+  top: 5px;
+  background: linear-gradient(190deg, rgba(149, 139, 128, 0.4) 0%, rgba(38, 27, 15, 0.7) 100%);
+  width: 52px;
+  height: 50px;
+  border-radius: 100px;
+  opacity: 0;
+  -webkit-transition-property: height, opacity;
+  transition-property: height, opacity;
+  -webkit-transition-duration: 0.5s, 0.5s;
+          transition-duration: 0.5s, 0.5s;
+  -webkit-transition-delay: 0s, 0.5s;
+          transition-delay: 0s, 0.5s;
+  -webkit-transition-timing-function: linear, ease;
+          transition-timing-function: linear, ease;
+}
+
+.contacts-container.active {
+  height: 276px;
+  opacity: 1;
+  -webkit-transition-duration: 0.5s, 0s;
+          transition-duration: 0.5s, 0s;
+  -webkit-transition-delay: 0s, 0s;
+          transition-delay: 0s, 0s;
+}
+
+.contacts-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  width: 32px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  margin: 10px;
+  -webkit-transition-property: top;
+  transition-property: top;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.contacts-item:nth-child(1) {
+  background-image: url(../img/icons/call-icon.png);
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.contacts-item:nth-child(2) {
+  background-image: url(../img/icons/email-icon.png);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.contacts-item:nth-child(3) {
+  background-image: url(../img/icons/instagram-icon.png);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.contacts-item:nth-child(4) {
+  background-image: url(../img/icons/telegram.png);
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.contacts-item:nth-child(5) {
+  background-image: url(../img/icons/whatsapp-icon.png);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.contacts-item.active:nth-child(1) {
+  top: 45px;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.contacts-item.active:nth-child(2) {
+  top: 90px;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.contacts-item.active:nth-child(3) {
+  top: 135px;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.contacts-item.active:nth-child(4) {
+  top: 180px;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.contacts-item.active:nth-child(5) {
+  top: 225px;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
 @media (max-width: 767px) {
   .header-wrapper {
     -webkit-box-align: start;
@@ -261,7 +381,7 @@ button:active {
             align-items: flex-end;
     height: 170px;
   }
-  .btn-phone-book {
+  .btn-contacts {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
@@ -271,6 +391,83 @@ button:active {
   }
   .btn-burger {
     display: block;
+  }
+  .contacts-container {
+    left: unset;
+    right: -10px;
+    top: 115px;
+    -webkit-transition-property: width, opacity;
+    transition-property: width, opacity;
+  }
+  .contacts-container.active {
+    height: 50px;
+    width: 276px;
+  }
+  .contacts-item {
+    left: auto;
+    right: 0;
+    -webkit-transition-property: right;
+    transition-property: right;
+  }
+  .contacts-item:nth-child(1) {
+    -webkit-transition-duration: 0.1s;
+            transition-duration: 0.1s;
+    -webkit-transition-delay: 0.4s;
+            transition-delay: 0.4s;
+  }
+  .contacts-item:nth-child(2) {
+    -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+  }
+  .contacts-item:nth-child(3) {
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  .contacts-item:nth-child(4) {
+    -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+    -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
+  }
+  .contacts-item:nth-child(5) {
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+  }
+  .contacts-item.active:nth-child(1) {
+    top: 0;
+    right: 45px;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+  }
+  .contacts-item.active:nth-child(2) {
+    top: 0;
+    right: 90px;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+  }
+  .contacts-item.active:nth-child(3) {
+    top: 0;
+    right: 135px;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+  }
+  .contacts-item.active:nth-child(4) {
+    top: 0;
+    right: 180px;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+  }
+  .contacts-item.active:nth-child(5) {
+    top: 0;
+    right: 225px;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
   }
 }
 
@@ -311,6 +508,7 @@ button:active {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 330px;
           flex: 0 1 330px;
+  z-index: 10;
 }
 
 .home-page-main .container {
@@ -454,6 +652,7 @@ button:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 10;
 }
 
 .home-page-dots__item {
@@ -470,7 +669,7 @@ button:active {
 }
 
 .home-page-dots__item:hover {
-  border: 3px solid rgba(178, 172, 166, 0.5);
+  border: 3px solid rgba(178, 172, 166, 0.2);
 }
 
 .home-page-dots__item.active {
