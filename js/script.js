@@ -28,6 +28,30 @@ $(document).ready(function() {
     });
   });
 
+  $(document).click(function(e) {
+    if ($(e.target).hasClass("btn-contacts")) {
+      $(".contacts-container").toggleClass("active");
+      $(".contacts-item").toggleClass("active");
+      $(".header-nav-menu").removeClass("active");
+      $(".home-page-main").removeClass("hidden");
+      $(".btn-menu span").removeClass("active");
+      $(".btn-burger__item").removeClass("active");
+      return;
+    }
+
+    if ($(e.target).hasClass("btn-menu")) {
+      openMenu();
+      return;
+    }
+
+    if ($(e.target).hasClass("btn-burger")) {
+      openMenu();
+      return;
+    }
+
+    closeAll();
+  });
+
   $(".home-page-dots__btn").click(function(e) {
     if (
       $(".home-page-slider__item:last-child .home-page-slider__img").attr(
@@ -108,7 +132,7 @@ $(document).ready(function() {
   $(".home-page-slider-arrow:last-child").click(function(e) {
     $(".home-page-slider__item:first-child").css({
       left: "auto",
-      right: "-100%",
+      right: "-100%"
     });
     $(".home-page-slider").append($(".home-page-slider__item:first-child"));
     $(".home-page-slider__item:last-child").animate({
@@ -116,16 +140,16 @@ $(document).ready(function() {
     });
   });
 
-  $(".btn-contacts").click(function () {
-    $(".contacts-container").toggleClass("active");
-    $(".contacts-item").toggleClass("active");
+  function closeAll() {
     $(".header-nav-menu").removeClass("active");
     $(".home-page-main").removeClass("hidden");
     $(".btn-menu span").removeClass("active");
     $(".btn-burger__item").removeClass("active");
-  })
+    $(".contacts-container").removeClass("active");
+    $(".contacts-item").removeClass("active");
+  }
 
-  function openMenu () {
+  function openMenu() {
     $(".header-nav-menu").toggleClass("active");
     if ($(".header-nav-menu").hasClass("active")) {
       $(".home-page-main").addClass("hidden");
@@ -136,16 +160,7 @@ $(document).ready(function() {
       $(".btn-menu span").removeClass("active");
       $(".btn-burger__item").removeClass("active");
     }
-
     $(".contacts-container").removeClass("active");
     $(".contacts-item").removeClass("active");
   }
-
-  $(".btn-menu").click(function () {
-    openMenu();
-  })
-
-  $(".btn-burger").click(function () {
-    openMenu();
-  })
 });

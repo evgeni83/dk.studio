@@ -6,20 +6,17 @@
   box-sizing: border-box;
   font-family: "Plumb", Arial, Helvetica, sans-serif;
   color: $main-color;
-  // cursor: default;
-  // z-index: 50;
 }
 
 html,
 body {
   min-width: 320px;
   min-height: 320px;
-  // background: #5A4E44;
+  background: #5A4E44;
 }
 
 a {
   text-decoration: none;
-  // cursor: pointer;
 }
 
 button {
@@ -49,7 +46,6 @@ button {
 .page-wrapper {
   position: relative;
   height: 100vh;
-  // background-color: black;
 }
 
 
