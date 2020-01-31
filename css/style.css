@@ -187,8 +187,8 @@ button:active {
 }
 
 .header-nav-menu__item:hover {
-  background: -webkit-gradient(linear, right top, left top, from(#B2ACA6), to(rgba(163, 154, 145, 0)));
-  background: linear-gradient(270deg, #B2ACA6 0%, rgba(163, 154, 145, 0) 100%);
+  background: -webkit-gradient(linear, right top, left top, from(#b2aca6), to(rgba(163, 154, 145, 0)));
+  background: linear-gradient(270deg, #b2aca6 0%, rgba(163, 154, 145, 0) 100%);
   color: #fff;
 }
 
@@ -264,10 +264,38 @@ button:active {
 
 .btn-menu {
   font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80px;
+          flex: 0 0 80px;
+}
+
+.btn-menu span {
+  display: block;
+  height: 20px;
+  width: 20px;
   background-image: url(../img/icons/arrow-menu-icon.png);
   background-repeat: no-repeat;
   background-position: 100% 50%;
-  padding-right: 25px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.btn-menu span.active {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 
 .btn-burger {
@@ -275,24 +303,42 @@ button:active {
   height: 30px;
 }
 
-.btn-burger__item::before, .btn-burger__item::after {
-  content: "";
-}
-
-.btn-burger__item, .btn-burger__item::before, .btn-burger__item::after {
+.btn-burger__item {
   display: block;
   width: 22px;
   height: 2px;
   background-color: #B2ACA6;
   position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-.btn-burger__item::before {
-  bottom: 6px;
+.btn-burger__item:nth-child(1) {
+  top: -4px;
 }
 
-.btn-burger__item::after {
-  top: 4px;
+.btn-burger__item:nth-child(1).active {
+  top: 2px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.btn-burger__item:nth-child(2) {
+  opacity: 1;
+}
+
+.btn-burger__item:nth-child(2).active {
+  opacity: 0;
+}
+
+.btn-burger__item:nth-child(3) {
+  bottom: -4px;
+}
+
+.btn-burger__item:nth-child(3).active {
+  bottom: 2px;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
 }
 
 .contacts-container {
@@ -655,6 +701,8 @@ button:active {
   position: absolute;
   border-radius: 50%;
   overflow: hidden;
+  -webkit-box-shadow: 0px 0px 100px 10px #B2ACA6;
+          box-shadow: 0px 0px 100px 10px #B2ACA6;
 }
 
 .home-page-slider__img {

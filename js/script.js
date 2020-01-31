@@ -121,22 +121,28 @@ $(document).ready(function() {
     $(".contacts-item").toggleClass("active");
     $(".header-nav-menu").removeClass("active");
     $(".home-page-main").removeClass("hidden");
+    $(".btn-menu span").removeClass("active");
+    $(".btn-burger__item").removeClass("active");
   })
 
   function openMenu () {
     $(".header-nav-menu").toggleClass("active");
     if ($(".header-nav-menu").hasClass("active")) {
       $(".home-page-main").addClass("hidden");
+      $(".btn-menu span").addClass("active");
+      $(".btn-burger__item").addClass("active");
     } else {
       $(".home-page-main").removeClass("hidden");
+      $(".btn-menu span").removeClass("active");
+      $(".btn-burger__item").removeClass("active");
     }
+
     $(".contacts-container").removeClass("active");
     $(".contacts-item").removeClass("active");
   }
 
   $(".btn-menu").click(function () {
     openMenu();
-
   })
 
   $(".btn-burger").click(function () {
