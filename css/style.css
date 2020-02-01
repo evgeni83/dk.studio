@@ -167,6 +167,7 @@ button:active {
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
+  z-index: 1;
 }
 
 .header-nav-menu.active {
@@ -248,7 +249,10 @@ button:active {
 }
 
 .btn-contacts {
+  width: 40px;
+  height: 40px;
   background-image: url(../img/icons/phone-book-icon.png);
+  background-size: auto;
   z-index: 20;
 }
 
@@ -354,12 +358,13 @@ button:active {
   opacity: 0;
   -webkit-transition-property: height, opacity;
   transition-property: height, opacity;
-  -webkit-transition-duration: 0.5s, 0.5s;
-          transition-duration: 0.5s, 0.5s;
+  -webkit-transition-duration: 0.5s, 0.1s;
+          transition-duration: 0.5s, 0.1s;
   -webkit-transition-delay: 0s, 0.5s;
           transition-delay: 0s, 0.5s;
-  -webkit-transition-timing-function: linear, ease;
-          transition-timing-function: linear, ease;
+  -webkit-transition-timing-function: linear, linear;
+          transition-timing-function: linear, linear;
+  z-index: 1;
 }
 
 .contacts-container.active {
@@ -955,6 +960,7 @@ button:active {
 .cap-page-main {
   position: relative;
   height: calc(100% - 127px);
+  z-index: 0;
 }
 
 .cap-page-main-wrapper {

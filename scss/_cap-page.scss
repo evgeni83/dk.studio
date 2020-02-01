@@ -49,6 +49,7 @@
 .cap-page-main {
   position: relative;
   height: calc(100% - 127px);
+  z-index: 0;
 
   &-wrapper {
     flex: 0 1 190px;

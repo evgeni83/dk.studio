@@ -13,7 +13,6 @@ $(document).ready(function() {
 
   $(".home-page-slider__img").offset({ top: 0, left: 0 });
   $(".home-page-dots__btn").offset({ top: 0, left: 0 });
-
   $(".home-page-dots__btn").css({
     "background-position": "center",
     "background-size": "cover"
@@ -29,7 +28,6 @@ $(document).ready(function() {
   });
 
   $(document).click(function(e) {
-    console.log(e.target);
     if ($(e.target)[0] == $(".btn-contacts")[0]) {
       $(".contacts-container").toggleClass("active");
       $(".contacts-item").toggleClass("active");
@@ -58,6 +56,7 @@ $(document).ready(function() {
     }
 
     closeAll();
+    return;
   });
 
   $(".home-page-dots__btn").click(function(e) {
@@ -97,10 +96,10 @@ $(document).ready(function() {
     );
     var targetSlide = targetImageElement.parent();
 
-    $(".home-page-slider").append($(targetSlide));
+    $(".home-page-slider").append(targetSlide);
 
-    $(targetSlide).offset({ top: yClick, left: xClick });
-    $(targetSlide).animate(
+    targetSlide.offset({ top: yClick, left: xClick });
+    targetSlide.animate(
       {
         left: -500,
         top: -500,
