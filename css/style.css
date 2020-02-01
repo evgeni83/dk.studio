@@ -69,7 +69,7 @@ html,
 body {
   min-width: 320px;
   min-height: 320px;
-  background-color: #5A4E44;
+  background-color: #5a4e44;
 }
 
 a {
@@ -103,6 +103,7 @@ button:active {
 .page-wrapper {
   position: relative;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 /* Landscape tablets and medium desktops */
@@ -621,9 +622,6 @@ button:active {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
     height: 170px;
     padding: 0;
   }
@@ -640,8 +638,8 @@ button:active {
   }
   .contacts-container {
     left: unset;
-    right: -10px;
-    top: 130px;
+    right: 0;
+    top: 124px;
     -webkit-transition-property: width, opacity;
     transition-property: width, opacity;
   }
@@ -717,7 +715,7 @@ button:active {
   }
   .header-nav-menu {
     right: -30px;
-    top: 110%;
+    top: 80%;
   }
   .header-nav-menu__list {
     right: auto;
@@ -731,8 +729,8 @@ button:active {
     background: rgba(19, 12, 7, 0.8);
   }
   .header-nav-menu__link {
-    height: 11vh;
-    line-height: 11vh;
+    height: 10vh;
+    line-height: 10vh;
     padding-left: 0;
     text-align: center;
   }

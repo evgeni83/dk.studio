@@ -12,7 +12,7 @@ html,
 body {
   min-width: 320px;
   min-height: 320px;
-  background-color: #5A4E44;
+  background-color: #5a4e44;
 }
 
 a {
@@ -46,9 +46,8 @@ button {
 .page-wrapper {
   position: relative;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
-
-
 
 /* Landscape tablets and medium desktops */
 @media (max-width: 1199px) {
@@ -59,7 +58,6 @@ button {
 
 /* Portrait tablets and small desktops */
 @media (max-width: 991px) {
-
 }
 
 /* Landscape phones and portrait tablets */
@@ -69,10 +67,8 @@ button {
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
-
 }
 
 /* Iphone 5 */
 @media (max-width: 320px) {
-
 }

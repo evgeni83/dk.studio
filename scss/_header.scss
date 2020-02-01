@@ -295,7 +295,6 @@
     &-right {
       flex: 0 1 50px;
       flex-direction: column-reverse;
-      align-items: flex-end;
       height: 170px;
       padding: 0;
     }
@@ -316,8 +315,8 @@
   .contacts {
     &-container {
       left: unset;
-      right: -10px;
-      top: 130px;
+      right: 0;
+      top: 124px;
       transition-property: width, opacity;
 
       &.active {
@@ -383,7 +382,7 @@
 
   .header-nav-menu {
     right: -30px;
-    top: 110%;
+    top: 80%;
 
     &__list {
       right: auto;
@@ -404,8 +403,8 @@
     }
 
     &__link {
-      height: 11vh;
-      line-height: 11vh;
+      height: 10vh;
+      line-height: 10vh;
       padding-left: 0;
       text-align: center;
     }
