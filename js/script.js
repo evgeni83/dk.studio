@@ -18,16 +18,6 @@ $(document).ready(function() {
     "background-size": "cover"
   });
 
-  $(window).on("load", function () {
-    console.log("!");
-    $(".preloader").addClass("hidden");
-  })
-
-  $(window).on("unload", function () {
-    console.log("!");
-    $(".preloader").removeClass("hidden");
-  })
-
   $(window).resize(function() {
     $(".home-page-slider__img").offset({ top: 0, left: 0 });
     $(".home-page-dots__btn").offset({ top: 0, left: 0 });
