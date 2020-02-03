@@ -21,11 +21,8 @@
 }
 
 .cssload-loader {
-  // position: relative;
-  // left: calc(50% - 31px);
   width: 100px;
   height: 100px;
-  // margin: 130px 0;
   perspective: 780px;
 }
 
@@ -51,7 +48,7 @@
     -ms-animation: cssload-rotate-one 1.15s linear infinite;
     -webkit-animation: cssload-rotate-one 1.15s linear infinite;
     -moz-animation: cssload-rotate-one 1.15s linear infinite;
-    border-bottom: 3px solid #5c5edc;
+    border-bottom: 3px solid $main-color;
   }
   &.cssload-two {
     right: 0%;
@@ -61,7 +58,7 @@
     -ms-animation: cssload-rotate-two 1.15s linear infinite;
     -webkit-animation: cssload-rotate-two 1.15s linear infinite;
     -moz-animation: cssload-rotate-two 1.15s linear infinite;
-    border-right: 3px solid rgba(76, 70, 101, 0.99);
+    border-right: 3px solid $dark-gray;
   }
   &.cssload-three {
     right: 0%;
@@ -71,7 +68,7 @@
     -ms-animation: cssload-rotate-three 1.15s linear infinite;
     -webkit-animation: cssload-rotate-three 1.15s linear infinite;
     -moz-animation: cssload-rotate-three 1.15s linear infinite;
-    border-top: 3px solid rgb(233, 144, 138);
+    border-top: 3px solid $white;
   }
 }
 @keyframes cssload-rotate-one {

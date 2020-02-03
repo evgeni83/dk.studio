@@ -178,7 +178,7 @@ button:active {
   -ms-animation: cssload-rotate-one 1.15s linear infinite;
   -webkit-animation: cssload-rotate-one 1.15s linear infinite;
   -moz-animation: cssload-rotate-one 1.15s linear infinite;
-  border-bottom: 3px solid #5c5edc;
+  border-bottom: 3px solid #B2ACA6;
 }
 
 .cssload-inner.cssload-two {
@@ -189,7 +189,7 @@ button:active {
   -ms-animation: cssload-rotate-two 1.15s linear infinite;
   -webkit-animation: cssload-rotate-two 1.15s linear infinite;
   -moz-animation: cssload-rotate-two 1.15s linear infinite;
-  border-right: 3px solid rgba(76, 70, 101, 0.99);
+  border-right: 3px solid #5A4E44;
 }
 
 .cssload-inner.cssload-three {
@@ -200,7 +200,7 @@ button:active {
   -ms-animation: cssload-rotate-three 1.15s linear infinite;
   -webkit-animation: cssload-rotate-three 1.15s linear infinite;
   -moz-animation: cssload-rotate-three 1.15s linear infinite;
-  border-top: 3px solid #e9908a;
+  border-top: 3px solid #fff;
 }
 
 @keyframes cssload-rotate-one {
