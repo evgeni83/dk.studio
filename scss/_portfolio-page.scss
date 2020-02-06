@@ -1,0 +1,97 @@
+.portfolio-page-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  // background-size: cover;
+  // background-position: 50% 50%;
+  // background-repeat: no-repeat;
+  overflow: hidden;
+
+  .portfolio-page-main {
+    flex: 0 1 310px;
+    .portfolio-container {
+      height: 100%;
+    }
+    &-wrapper {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .portfolio-slider-dots {
+        display: flex;
+        justify-content: space-evenly;
+
+        &-item {
+          flex: 0 0 130px;
+          height: 130px;
+          border-radius: 50%;
+          border: 1px solid #ffffff;
+        }
+      }
+
+      .portfolio-desc {
+        flex: 0 1 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-title {
+          font-weight: normal;
+          font-size: 24px;
+        }
+
+        &-details {
+          flex: 0 1 50%;
+          display: flex;
+          justify-content: space-between;
+
+          &-column {
+            flex: 0 1 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+
+          &-item {
+            display: flex;
+            align-items: center;
+          }
+
+          &-rendering {
+            justify-content: flex-end;
+          }
+
+          &-location-img,
+          &-area-img,
+          &-authors-img,
+          &-rendering-img,
+          &-share-img {
+            flex: 0 0 44px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+          }
+
+          &-share-img {
+            justify-content: flex-end;
+            object-fit: contain;
+          }
+
+          &-share {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            &-text {
+              text-transform: uppercase;
+              font-weight: 500;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
