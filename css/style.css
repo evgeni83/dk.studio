@@ -1086,6 +1086,38 @@ button:active {
           justify-content: space-between;
 }
 
+.portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-page-slider-arrows {
+  position: absolute;
+  right: 34px;
+  top: 42%;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-height: 80px;
+  height: 100%;
+  z-index: 60;
+}
+
+.portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-page-slider-arrow {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-image: url(../img/icons/right-arrow-icon.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-page-slider-arrow:last-child {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
 .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-slider-dots {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1093,13 +1125,26 @@ button:active {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-slider-dots-item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 130px;
-          flex: 0 0 130px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 130px;
+          flex: 1 0 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-slider-dots-item-btn {
+  display: block;
   height: 130px;
+  width: 130px;
   border-radius: 50%;
   border: 1px solid #ffffff;
 }
@@ -1162,6 +1207,11 @@ button:active {
           align-items: center;
 }
 
+.portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-details-item svg {
+  width: 30px;
+  height: 30px;
+}
+
 .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-details-rendering {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -1207,6 +1257,99 @@ button:active {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 18px;
+}
+
+@media (max-width: 1199px) {
+  .portfolio-page-page-wrapper .portfolio-page-main {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 200px;
+            flex: 0 1 200px;
+  }
+  .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-slider-dots-item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 80px;
+            flex: 1 0 80px;
+  }
+  .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-slider-dots-item-btn {
+    height: 80px;
+    width: 80px;
+  }
+  .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-details {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 70%;
+            flex: 0 1 70%;
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio-page-page-wrapper {
+    padding-bottom: 20px;
+  }
+  .portfolio-page-page-wrapper .portfolio-page-main-wrapper {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-page-slider-arrows {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-slider-dots {
+    display: none;
+  }
+  .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 70%;
+            flex: 0 1 70%;
+  }
+  .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-details-column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
+  .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-details-item {
+    margin-top: 10px;
+  }
+  .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-details-rendering {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-details-share {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-title {
+    font-size: 20px;
+  }
+  .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-details-item svg {
+    width: 20px;
+    height: 20px;
+  }
+  .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-details-location-img, .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-details-area-img, .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-details-authors-img, .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-details-rendering-img, .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-details-share-img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 26px;
+            flex: 0 0 26px;
+  }
+  .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-details-share-img {
+    width: 20px;
+    height: 20px;
+  }
+  .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-details-location-text, .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-details-area-text, .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-details-authors-text, .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-details-rendering-text, .portfolio-page-page-wrapper .portfolio-page-main-wrapper .portfolio-desc-details-share-text {
+    font-size: 12px;
+  }
 }
 
 .cap-page-wrapper {
