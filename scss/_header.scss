@@ -43,15 +43,17 @@
     &__item {
       display: block;
       background: linear-gradient(
-        90deg,
-        rgba(149, 139, 128, 0) 0%,
-        rgba(163, 154, 145, 0.4) 100%
+        270deg,
+        rgba(9, 5, 2, 0.8) 0%,
+        rgba(8, 5, 2, 0.6) 90%,
+        rgba(7, 4, 2, 0) 100%
       );
 
       &:hover {
         background: linear-gradient(
           270deg,
-          #b2aca6 0%,
+          rgba(100, 87, 75, 0.7) 0%,
+          rgba(112, 100, 90, 0.8) 90%,
           rgba(163, 154, 145, 0) 100%
         );
         color: $white;
@@ -382,7 +384,6 @@
 
   .header-nav-menu {
     right: -30px;
-    top: 80%;
 
     &__list {
       right: auto;
@@ -391,14 +392,19 @@
 
     &__item {
       background: linear-gradient(
-        90deg,
-        rgba(19, 12, 7, 0) 0%,
-        rgba(19, 12, 7, 0.5) 50%,
-        rgba(19, 12, 7, 0.5) 100%
+        270deg,
+        rgba(9, 5, 2, 0.8) 0%,
+        rgba(8, 5, 2, 0.8) 50%,
+        rgba(7, 4, 2, 0) 100%
       );
 
       &:hover {
-        background: rgba(19, 12, 7, 0.8);
+        background: linear-gradient(
+          270deg,
+          rgba(100, 87, 75, 0.8) 0%,
+          rgba(112, 100, 90, 0.8) 50%,
+          rgba(163, 154, 145, 0) 100%
+        );
       }
     }
 
