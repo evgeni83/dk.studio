@@ -28,7 +28,6 @@
         transition-delay: 0s;
       }
 
-
       &__row {
         flex: 0 0 50px;
         display: flex;
@@ -47,6 +46,61 @@
         filter: drop-shadow(0px 0px 2px $dark-main);
         transform: scale(1);
         transition: 0.3s;
+
+        &_up,
+        &_down,
+        &_left,
+        &_right {
+          &::after {
+            position: absolute;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 12px;
+            text-align: center;
+            opacity: 0;
+            visibility: hidden;
+            transition-duration: 0.3s;
+            transition-delay: 0s;
+          }
+
+          &:hover::after {
+            opacity: 1;
+            visibility: visible;
+            transition-delay: 1s;
+          }
+        }
+
+        &_up {
+          &::after {
+            content: "Предыдущий проект";
+            top: -40px;
+            left: -28px;
+          }
+        }
+
+        &_down {
+          &::after {
+            content: "Следующий проект";
+            bottom: -40px;
+            left: -20px;
+          }
+        }
+
+        &_left {
+          &::after {
+            content: "Предыдущее фото";
+            bottom: -35px;
+            left: -40px;
+          }
+        }
+
+        &_right {
+          &::after {
+            content: "Следующее фото";
+            bottom: -35px;
+            left: -10px;
+          }
+        }
 
         &:hover {
           transform: scale(1.2);
