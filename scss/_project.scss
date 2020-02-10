@@ -17,6 +17,17 @@
       z-index: 10;
       display: flex;
       flex-direction: column;
+      opacity: 1;
+      visibility: visible;
+      transition-duration: 0.3s;
+      transition-delay: 0.3s;
+
+      &.hidden {
+        opacity: 0;
+        visibility: hidden;
+        transition-delay: 0s;
+      }
+
 
       &__row {
         flex: 0 0 50px;
@@ -52,7 +63,10 @@
           fill: $main-color;
           stroke: $main-color;
         }
-        
+
+        &_disabled {
+          visibility: hidden;
+        }
       }
     }
   }
@@ -236,43 +250,12 @@
 
 @media (max-width: 480px) {
   .project {
-
     &-page-wrapper {
       .cursor-pad {
         top: auto;
-        right: auto;
+        right: 20px;
         bottom: 10px;
-        left: 20px;
         transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-        transition-duration: 0.3s;
-        transition-delay: 0.3s;
-
-        &.hidden {
-          opacity: 0;
-          visibility: hidden;
-          transition-delay: 0s;
-        }
-  
-        &__row {
-          &_center {
-          }
-        }
-  
-        &__btn {
-  
-          &:hover {
-          }
-  
-          path,
-          line {
-          }
-  
-          &:hover path:first-child {
-          }
-          
-        }
       }
     }
 
@@ -291,18 +274,20 @@
 
       &::after {
         top: 30px;
-        left: 100%;
-        transform: translateX(-150%);
+        left: 40px;
       }
 
       &:hover::after {
-        opacity: 1;
+        opacity: 0;
+        visibility: hidden;
       }
 
       &.hidden {
         transform: translateY(100%);
         &::after {
           top: -50px;
+          opacity: 1;
+          visibility: visible;
         }
       }
     }

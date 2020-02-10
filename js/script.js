@@ -63,6 +63,7 @@ $(document).ready(function() {
         .parent()
         .hasClass("btn-menu")
     ) {
+      $(".cursor-pad").addClass("hidden");
       openMenu();
       return;
     }
@@ -134,6 +135,25 @@ $(document).ready(function() {
 
     $(".page-slider").append(targetSlide);
 
+    if (targetImagePath == "img/82_003.jpg") {
+      $(".home-page-main__content").html(
+        '<p class="home-page-main__text">Проект загородного дома из бруса</p><a href="4-male-character-classic-style.html" class="home-page-main__link">смотреть</a>'
+      );
+    }
+
+    if (targetImagePath == "img/97_002.jpg") {
+      $(".home-page-main__content").html(
+        '<p class="home-page-main__text">Проект дома у озера в современном стиле</p><a href="6-rhapsody-by-the-lake-modern-classic.html" class="home-page-main__link">смотреть</a>'
+      );
+    }
+
+    
+    if (targetImagePath == "img/69_02.jpg") {
+      $(".home-page-main__content").html(
+        '<p class="home-page-main__text">Проект дома современном скандинавском стиле</p><a href="7-scandinavian-motifs-in-modern-performance.html" class="home-page-main__link">смотреть</a>'
+      );
+    }
+
     targetSlide.offset({ top: yClick, left: xClick });
     targetSlide.animate(
       {
@@ -184,6 +204,7 @@ $(document).ready(function() {
   });
 
   $(".project-slider").slick({
+    lazyLoad: "ondemand",
     prevArrow: $(".cursor-pad__btn_left"),
     nextArrow: $(".cursor-pad__btn_right")
   });
