@@ -26,7 +26,7 @@ $(document).ready(function() {
     "background-size": "cover"
   });
 
-  $(".portfolio-page-wrapper").on("scroll", function (e) {
+  $(".portfolio-page-wrapper").on("scroll", function(e) {
     if ($(".portfolio-main").offset().top < $(".portfolio-header").height()) {
       $(".portfolio-header").addClass("not-transparent");
     } else {
@@ -43,9 +43,9 @@ $(document).ready(function() {
     });
   });
 
-
   $(document).click(function(e) {
     if ($(e.target).hasClass("btn-contacts")) {
+      closeAll();
       $(".contacts-container").toggleClass("active");
       $(".contacts-item").toggleClass("active");
       $(".header-nav-menu").removeClass("active");
@@ -73,7 +73,23 @@ $(document).ready(function() {
         .parent()
         .hasClass("btn-burger")
     ) {
+      closeAll();
+      $(".cursor-pad").addClass("hidden");
       openMenu();
+      return;
+    }
+
+    if (
+      $(e.target).hasClass("project-main") ||
+      $(e.target).hasClass("project-main-wrapper") ||
+      $(e.target).hasClass("project-description") ||
+      $(e.target).hasClass("project-description__title") ||
+      $(e.target).hasClass("project-description__details") ||
+      $(e.target).hasClass("project-description__item")
+    ) {
+      closeAll();
+      $(".project-main").removeClass("hidden");
+      $(".cursor-pad").addClass("hidden");
       return;
     }
 
@@ -167,6 +183,11 @@ $(document).ready(function() {
     });
   });
 
+  $(".project-slider").slick({
+    prevArrow: $(".cursor-pad__btn_left"),
+    nextArrow: $(".cursor-pad__btn_right")
+  });
+
   function closeAll() {
     $(".header-nav-menu").removeClass("active");
     $(".home-page-main").removeClass("hidden");
@@ -176,6 +197,8 @@ $(document).ready(function() {
     $(".btn-burger__item").removeClass("active");
     $(".contacts-container").removeClass("active");
     $(".contacts-item").removeClass("active");
+    $(".project-main").addClass("hidden");
+    $(".cursor-pad").removeClass("hidden");
   }
 
   function openMenu() {

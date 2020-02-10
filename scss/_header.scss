@@ -112,6 +112,7 @@
 
   &-personal-account {
     background-image: url(../img/icons/personal-account-icon.png);
+    filter: drop-shadow(0px 0px 2px $dark-main);
   }
 
   &-contacts {
@@ -120,6 +121,7 @@
     background-image: url(../img/icons/phone-book-icon.png);
     background-size: auto;
     z-index: 20;
+    filter: drop-shadow(0px 0px 2px $dark-main);
   }
 
   &-change-lang,
@@ -127,6 +129,7 @@
     text-transform: uppercase;
     color: $main-color;
     font-size: 18px;
+    filter: drop-shadow(0px 0px 2px $dark-main);
   }
 
   &-change-lang {
