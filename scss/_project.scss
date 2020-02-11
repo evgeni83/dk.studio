@@ -41,6 +41,7 @@
       }
 
       &__btn {
+        position: relative;
         width: 30px;
         height: 30px;
         filter: drop-shadow(0px 0px 2px $dark-main);
@@ -52,22 +53,38 @@
         &_right,
         &_center {
           &::after {
+            display: block;
             position: absolute;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 12px;
-            text-align: center;
+            top: 0;
+            right: 0;
             opacity: 0;
             visibility: hidden;
-            transition-duration: 0.3s;
-            transition-delay: 0s;
+            height: 30px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: normal;
+            text-transform: uppercase;
+            text-align: left;
+            line-height: 31px;
+            padding-left: 15px;
+            background-color: $main-color;
+            color: $header-color;
+            pointer-events: none;
+            transition-property: visibility, opacity;
+            transition-duration: 0.5s, 0.5s;
+            transition-delay: 0.5s, 0s;
           }
 
           @media (min-width: 768px) {
+            &:hover {
+              z-index: 2;
+            }
             &:hover::after {
               opacity: 1;
               visibility: visible;
-              transition-delay: 1s;
+              transition-property: visibility, opacity;
+              transition-duration: 0.5s, 0.5s;
+              transition-delay: 1s, 1s;
             }
           }
         }
@@ -75,42 +92,35 @@
         &_up {
           &::after {
             content: "Предыдущий проект";
-            top: -35px;
-            left: -28px;
+            width: 210px;
           }
         }
 
         &_down {
           &::after {
             content: "Следующий проект";
-            bottom: 139px;
-            left: -20px;
+            width: 200px;
           }
         }
 
         &_left {
           &::after {
             content: "Предыдущее фото";
-            bottom: 89px;
-            left: 21px;
+            width: 190px;
           }
         }
 
         &_right {
           &::after {
             content: "Следующее фото";
-            bottom: 89px;
-            left: -84px;
-            width: 100px;
+            width: 180px;
           }
         }
 
         &_center {
           &::after {
             content: "Все проекты";
-            bottom: 89px;
-            left: -20px;
-            width: 70px;
+            width: 150px;
           }
         }
 
