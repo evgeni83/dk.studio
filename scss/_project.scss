@@ -47,6 +47,11 @@
         filter: drop-shadow(0px 0px 2px $dark-main);
         transition: 0.3s;
 
+        &:hover svg {
+          position: relative;
+          z-index: 3;
+        }
+
         &_up,
         &_down,
         &_left,
@@ -72,7 +77,7 @@
             pointer-events: none;
             transition-property: visibility, opacity;
             transition-duration: 0.5s, 0.5s;
-            transition-delay: 0.5s, 0s;
+            transition-delay: 0s, 0s;
           }
 
           @media (min-width: 768px) {
@@ -84,7 +89,7 @@
               visibility: visible;
               transition-property: visibility, opacity;
               transition-duration: 0.5s, 0.5s;
-              transition-delay: 1s, 1s;
+              transition-delay: 0.2s, 0.2s;
             }
           }
         }
@@ -134,7 +139,6 @@
         @media (min-width: 768px) {
           &:hover path:first-child {
             fill: $main-color;
-            stroke: $main-color;
           }
         }
 
