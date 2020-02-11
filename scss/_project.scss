@@ -44,13 +44,13 @@
         width: 30px;
         height: 30px;
         filter: drop-shadow(0px 0px 2px $dark-main);
-        transform: scale(1);
         transition: 0.3s;
 
         &_up,
         &_down,
         &_left,
-        &_right {
+        &_right,
+        &_center {
           &::after {
             position: absolute;
             text-transform: uppercase;
@@ -63,17 +63,19 @@
             transition-delay: 0s;
           }
 
-          &:hover::after {
-            opacity: 1;
-            visibility: visible;
-            transition-delay: 1s;
+          @media (min-width: 768px) {
+            &:hover::after {
+              opacity: 1;
+              visibility: visible;
+              transition-delay: 1s;
+            }
           }
         }
 
         &_up {
           &::after {
             content: "Предыдущий проект";
-            top: -40px;
+            top: -35px;
             left: -28px;
           }
         }
@@ -81,7 +83,7 @@
         &_down {
           &::after {
             content: "Следующий проект";
-            bottom: -40px;
+            bottom: 139px;
             left: -20px;
           }
         }
@@ -89,21 +91,27 @@
         &_left {
           &::after {
             content: "Предыдущее фото";
-            bottom: -35px;
-            left: -40px;
+            bottom: 89px;
+            left: 21px;
           }
         }
 
         &_right {
           &::after {
             content: "Следующее фото";
-            bottom: -35px;
-            left: -10px;
+            bottom: 89px;
+            left: -84px;
+            width: 100px;
           }
         }
 
-        &:hover {
-          transform: scale(1.2);
+        &_center {
+          &::after {
+            content: "Все проекты";
+            bottom: 89px;
+            left: -20px;
+            width: 70px;
+          }
         }
 
         path,
@@ -113,9 +121,11 @@
           transition: 0.3s;
         }
 
-        &:hover path:first-child {
-          fill: $main-color;
-          stroke: $main-color;
+        @media (min-width: 768px) {
+          &:hover path:first-child {
+            fill: $main-color;
+            stroke: $main-color;
+          }
         }
 
         &_disabled {
@@ -204,23 +214,26 @@
       top: -50px;
       left: 50%;
       transform: translateX(-50%);
-      width: 30px;
-      height: 30px;
+      width: 50px;
+      height: 50px;
       background-image: url(../img/icons/info.svg);
       background-repeat: no-repeat;
       background-position: 50% 50%;
-      background-size: contain;
       filter: drop-shadow(0px 0px 2px $dark-main);
       opacity: 1;
       transition: 0.3s;
     }
 
-    &:hover {
-      transform: translateY(0);
+    @media (min-width: 768px) {
+      &:hover {
+        transform: translateY(0);
+      }
     }
 
-    &:hover::after {
-      opacity: 0;
+    @media (min-width: 768px) {
+      &:hover::after {
+        opacity: 0;
+      }
     }
   }
 
@@ -281,9 +294,41 @@
 
 @media (max-width: 767px) {
   .project {
+    &-main {
+      transform: translateY(0);
+
+      &::before {
+        height: 100%;
+        background: linear-gradient(
+          0deg,
+          #261b0f 0%,
+          rgba(38, 27, 15, 0.816667) 77.08%,
+          rgba(38, 27, 15, 0.57) 100%
+        );
+      }
+
+      &::after {
+        top: 30px;
+        left: 40px;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &.hidden {
+        transform: translateY(100%);
+        &::after {
+          top: -50px;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
     &-description {
       &__title {
         font-size: 18px;
+        margin-top: 30px;
+        margin-right: 20px;
       }
 
       &__details {
@@ -313,44 +358,7 @@
       }
     }
 
-    &-main {
-      transform: translateY(0);
-
-      &::before {
-        height: 100%;
-        background: linear-gradient(
-          0deg,
-          #261b0f 0%,
-          rgba(38, 27, 15, 0.816667) 77.08%,
-          rgba(38, 27, 15, 0.57) 100%
-        );
-      }
-
-      &::after {
-        top: 30px;
-        left: 40px;
-      }
-
-      &:hover::after {
-        opacity: 0;
-        visibility: hidden;
-      }
-
-      &.hidden {
-        transform: translateY(100%);
-        &::after {
-          top: -50px;
-          opacity: 1;
-          visibility: visible;
-        }
-      }
-    }
     &-description {
-      &__title {
-        margin-top: 30px;
-        margin-right: 20px;
-      }
-
       &__details {
         flex-direction: column;
       }

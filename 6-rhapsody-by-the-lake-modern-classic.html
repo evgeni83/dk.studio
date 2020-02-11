@@ -169,55 +169,72 @@
     <div class="project-slider-wrapper">
       <div class="project-slider">
         <div class="project-slider__item">
-          <img src="img/portfolio/6-rhapsody-by-the-lake-modern-classic/1.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/6-rhapsody-by-the-lake-modern-classic/1.jpg" alt="foto"
+            class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/6-rhapsody-by-the-lake-modern-classic/2.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/6-rhapsody-by-the-lake-modern-classic/2.jpg" alt="foto"
+            class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/6-rhapsody-by-the-lake-modern-classic/3.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/6-rhapsody-by-the-lake-modern-classic/3.jpg" alt="foto"
+            class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/6-rhapsody-by-the-lake-modern-classic/4.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/6-rhapsody-by-the-lake-modern-classic/4.jpg" alt="foto"
+            class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/6-rhapsody-by-the-lake-modern-classic/5.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/6-rhapsody-by-the-lake-modern-classic/5.jpg" alt="foto"
+            class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/6-rhapsody-by-the-lake-modern-classic/6.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/6-rhapsody-by-the-lake-modern-classic/6.jpg" alt="foto"
+            class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/6-rhapsody-by-the-lake-modern-classic/7.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/6-rhapsody-by-the-lake-modern-classic/7.jpg" alt="foto"
+            class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/6-rhapsody-by-the-lake-modern-classic/8.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/6-rhapsody-by-the-lake-modern-classic/8.jpg" alt="foto"
+            class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/6-rhapsody-by-the-lake-modern-classic/9.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/6-rhapsody-by-the-lake-modern-classic/9.jpg" alt="foto"
+            class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/6-rhapsody-by-the-lake-modern-classic/10.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/6-rhapsody-by-the-lake-modern-classic/10.jpg" alt="foto"
+            class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/6-rhapsody-by-the-lake-modern-classic/11.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/6-rhapsody-by-the-lake-modern-classic/11.jpg" alt="foto"
+            class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/6-rhapsody-by-the-lake-modern-classic/12.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/6-rhapsody-by-the-lake-modern-classic/12.jpg" alt="foto"
+            class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/6-rhapsody-by-the-lake-modern-classic/13.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/6-rhapsody-by-the-lake-modern-classic/13.jpg" alt="foto"
+            class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/6-rhapsody-by-the-lake-modern-classic/14.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/6-rhapsody-by-the-lake-modern-classic/14.jpg" alt="foto"
+            class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/6-rhapsody-by-the-lake-modern-classic/15.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/6-rhapsody-by-the-lake-modern-classic/15.jpg" alt="foto"
+            class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/6-rhapsody-by-the-lake-modern-classic/16.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/6-rhapsody-by-the-lake-modern-classic/16.jpg" alt="foto"
+            class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/6-rhapsody-by-the-lake-modern-classic/17.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/6-rhapsody-by-the-lake-modern-classic/17.jpg" alt="foto"
+            class="project-slider__img">
         </div>
 
       </div>
@@ -243,6 +260,11 @@
 
   </div>
 
+  <script>
+    document.querySelector(".project-slider__img").onload = function () {
+      document.querySelector(".preloader").classList.add("hidden");
+    };
+  </script>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/script.js"></script>

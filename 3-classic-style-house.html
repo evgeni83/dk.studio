@@ -16,11 +16,6 @@
   <meta name="theme-color" content="#ffffff">
   <title>DK Studio</title>
   <link rel="stylesheet" href="css/style.css">
-  <script>
-    window.onload = function () {
-      document.querySelector(".preloader").classList.add("hidden");
-    };
-  </script>
 </head>
 
 <body>
@@ -113,7 +108,7 @@
           </svg>
         </a>
       </div>
-      
+
       <div class="cursor-pad__row cursor-pad__row_center">
         <button class="cursor-pad__btn cursor-pad__btn_left">
           <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -152,7 +147,7 @@
           </svg>
         </button>
       </div>
-      
+
       <div class="cursor-pad__row cursor-pad__row_bottom">
         <a href="4-male-character-classic-style.html" class="cursor-pad__btn cursor-pad__btn_down">
           <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -169,55 +164,55 @@
     <div class="project-slider-wrapper">
       <div class="project-slider">
         <div class="project-slider__item">
-          <img src="img/portfolio/3-classic-style-house/1.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/3-classic-style-house/1.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/3-classic-style-house/2.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/3-classic-style-house/2.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/3-classic-style-house/3.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/3-classic-style-house/3.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/3-classic-style-house/4.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/3-classic-style-house/4.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/3-classic-style-house/5.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/3-classic-style-house/5.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/3-classic-style-house/6.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/3-classic-style-house/6.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/3-classic-style-house/7.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/3-classic-style-house/7.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/3-classic-style-house/8.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/3-classic-style-house/8.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/3-classic-style-house/9.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/3-classic-style-house/9.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/3-classic-style-house/10.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/3-classic-style-house/10.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/3-classic-style-house/11.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/3-classic-style-house/11.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/3-classic-style-house/12.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/3-classic-style-house/12.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/3-classic-style-house/13.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/3-classic-style-house/13.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/3-classic-style-house/14.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/3-classic-style-house/14.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/3-classic-style-house/15.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/3-classic-style-house/15.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/3-classic-style-house/16.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/3-classic-style-house/16.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/3-classic-style-house/17.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/3-classic-style-house/17.jpg" alt="foto" class="project-slider__img">
         </div>
       </div>
     </div>
@@ -242,7 +237,11 @@
 
 
   </div>
-
+  <script>
+    document.querySelector(".project-slider__img").onload = function () {
+      document.querySelector(".preloader").classList.add("hidden");
+    };
+  </script>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/script.js"></script>

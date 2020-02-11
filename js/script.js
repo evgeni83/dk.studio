@@ -45,7 +45,10 @@ $(document).ready(function() {
 
   $(document).click(function(e) {
     if ($(e.target).hasClass("btn-contacts")) {
-      closeAll();
+      if ($(".contacts-container").hasClass("active")) {
+        closeAll();
+        return;
+      }
       $(".contacts-container").toggleClass("active");
       $(".contacts-item").toggleClass("active");
       $(".header-nav-menu").removeClass("active");
@@ -54,6 +57,7 @@ $(document).ready(function() {
       $(".cap-page-main").removeClass("hidden");
       $(".btn-menu span").removeClass("active");
       $(".btn-burger__item").removeClass("active");
+      $(".project-main").addClass("hidden");
       return;
     }
 
@@ -74,23 +78,19 @@ $(document).ready(function() {
         .parent()
         .hasClass("btn-burger")
     ) {
-      closeAll();
       $(".cursor-pad").addClass("hidden");
       openMenu();
       return;
     }
 
-    if (
-      $(e.target).hasClass("project-main") ||
-      $(e.target).hasClass("project-main-wrapper") ||
-      $(e.target).hasClass("project-description") ||
-      $(e.target).hasClass("project-description__title") ||
-      $(e.target).hasClass("project-description__details") ||
-      $(e.target).hasClass("project-description__item")
-    ) {
+    if ($(e.target).hasClass("project-main")) {
+      if ($(".project-main").hasClass("hidden")) {
+        closeAll();
+        $(".project-main").removeClass("hidden");
+        $(".cursor-pad").addClass("hidden");
+        return;
+      }
       closeAll();
-      $(".project-main").removeClass("hidden");
-      $(".cursor-pad").addClass("hidden");
       return;
     }
 
@@ -147,7 +147,6 @@ $(document).ready(function() {
       );
     }
 
-    
     if (targetImagePath == "img/69_02.jpg") {
       $(".home-page-main__content").html(
         '<p class="home-page-main__text">Проект дома современном скандинавском стиле</p><a href="7-scandinavian-motifs-in-modern-performance.html" class="home-page-main__link">смотреть</a>'
@@ -204,7 +203,7 @@ $(document).ready(function() {
   });
 
   $(".project-slider").slick({
-    lazyLoad: "ondemand",
+    lazyLoad: "progressive",
     prevArrow: $(".cursor-pad__btn_left"),
     nextArrow: $(".cursor-pad__btn_right")
   });
@@ -228,6 +227,7 @@ $(document).ready(function() {
       $(".home-page-main").addClass("hidden");
       $(".portfolio-main").addClass("hidden");
       $(".cap-page-main").addClass("hidden");
+      $(".project-main").addClass("hidden");
       $(".btn-menu span").addClass("active");
       $(".btn-burger__item").addClass("active");
     } else {

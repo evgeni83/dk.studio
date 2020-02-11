@@ -111,14 +111,14 @@
   }
 
   &-personal-account {
-    background-image: url(../img/icons/personal-account-icon.png);
+    background-image: url(../img/icons/personal-account-icon.svg);
     filter: drop-shadow(0px 0px 2px $dark-main);
   }
 
   &-contacts {
     width: 40px;
     height: 40px;
-    background-image: url(../img/icons/phone-book-icon.png);
+    background-image: url(../img/icons/contacts.svg);
     background-size: auto;
     z-index: 20;
     filter: drop-shadow(0px 0px 2px $dark-main);
@@ -151,7 +151,6 @@
       background-image: url(../img/icons/arrow-menu-icon.png);
       background-repeat: no-repeat;
       background-position: 100% 50%;
-      // padding-right: 25px;
       transform: rotate(0deg);
       transition: transform 0.5s;
 
@@ -163,10 +162,12 @@
 
   &-burger {
     display: none;
+    width: 30px;
     height: 30px;
 
     &__item {
       display: block;
+      margin: auto;
       width: 22px;
       height: 2px;
       background-color: $main-color;
@@ -204,7 +205,7 @@
     position: absolute;
     right: auto;
     left: 54px;
-    top: 5px;
+    top: 7px;
     background: linear-gradient(
       190deg,
       rgba(149, 139, 128, 0.4) 0%,
@@ -213,6 +214,7 @@
     width: 52px;
     height: 50px;
     border-radius: 100px;
+    box-shadow: 0px 0px 5px 0px $dark-main;
     opacity: 0;
     transition-property: height, opacity;
     transition-duration: 0.5s, 0.1s;
@@ -241,27 +243,27 @@
     transition-timing-function: linear;
 
     &:nth-child(1) {
-      background-image: url(../img/icons/call-icon.png);
+      background-image: url(../img/icons/call-icon.svg);
       transition-duration: 0.1s;
       transition-delay: 0.4s;
     }
     &:nth-child(2) {
-      background-image: url(../img/icons/email-icon.png);
+      background-image: url(../img/icons/email-icon.svg);
       transition-duration: 0.2s;
       transition-delay: 0.3s;
     }
     &:nth-child(3) {
-      background-image: url(../img/icons/instagram-icon.png);
+      background-image: url(../img/icons/instagram-icon.svg);
       transition-duration: 0.3s;
       transition-delay: 0.2s;
     }
     &:nth-child(4) {
-      background-image: url(../img/icons/telegram.png);
+      background-image: url(../img/icons/telegram-icon.svg);
       transition-duration: 0.4s;
       transition-delay: 0.1s;
     }
     &:nth-child(5) {
-      background-image: url(../img/icons/whatsapp-icon.png);
+      background-image: url(../img/icons/whatsapp-icon.svg);
       transition-duration: 0.5s;
       transition-delay: 0s;
     }
@@ -302,6 +304,8 @@
       flex-direction: column-reverse;
       height: 170px;
       padding: 0;
+      position: absolute;
+      right: 0;
     }
   }
 
@@ -320,8 +324,8 @@
   .contacts {
     &-container {
       left: unset;
-      right: 0;
-      top: 124px;
+      right: -4px;
+      top: 125px;
       transition-property: width, opacity;
 
       &.active {
@@ -357,27 +361,27 @@
 
       &.active {
         &:nth-child(1) {
-          top: 0;
+          top: -1px;
           right: 45px;
           transition-delay: 0s;
         }
         &:nth-child(2) {
-          top: 0;
+          top: -1px;
           right: 90px;
           transition-delay: 0s;
         }
         &:nth-child(3) {
-          top: 0;
+          top: -1px;
           right: 135px;
           transition-delay: 0s;
         }
         &:nth-child(4) {
-          top: 0;
+          top: -1px;
           right: 180px;
           transition-delay: 0s;
         }
         &:nth-child(5) {
-          top: 0;
+          top: -1px;
           right: 225px;
           transition-delay: 0s;
         }
@@ -387,6 +391,7 @@
 
   .header-nav-menu {
     right: -30px;
+    top: 130%;
 
     &__list {
       right: auto;
@@ -436,5 +441,9 @@
       letter-spacing: 3.5px;
       line-height: 16px;
     }
+  }
+
+  .header-nav-menu {
+    top: 160%;
   }
 }

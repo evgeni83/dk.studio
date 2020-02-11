@@ -17,6 +17,7 @@ body {
 
 a {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button {
@@ -27,6 +28,7 @@ button {
   cursor: pointer;
 
   &:active {
+    -webkit-tap-highlight-color: transparent;
     outline: none;
   }
 }

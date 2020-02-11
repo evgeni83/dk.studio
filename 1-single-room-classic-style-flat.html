@@ -16,11 +16,6 @@
   <meta name="theme-color" content="#ffffff">
   <title>DK Studio</title>
   <link rel="stylesheet" href="css/style.css">
-  <script>
-    window.onload = function () {
-      document.querySelector(".preloader").classList.add("hidden");
-    };
-  </script>
 </head>
 
 <body>
@@ -113,7 +108,7 @@
           </svg>
         </a>
       </div>
-      
+
       <div class="cursor-pad__row cursor-pad__row_center">
         <button class="cursor-pad__btn cursor-pad__btn_left">
           <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -152,7 +147,7 @@
           </svg>
         </button>
       </div>
-      
+
       <div class="cursor-pad__row cursor-pad__row_bottom">
         <a href="2-single-room-modern-style-flat.html" class="cursor-pad__btn cursor-pad__btn_down">
           <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -169,25 +164,25 @@
     <div class="project-slider-wrapper">
       <div class="project-slider">
         <div class="project-slider__item">
-          <img src="img/portfolio/1-single-room-classic-style-flat/1.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/1-single-room-classic-style-flat/1.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/1-single-room-classic-style-flat/2.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/1-single-room-classic-style-flat/2.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/1-single-room-classic-style-flat/3.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/1-single-room-classic-style-flat/3.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/1-single-room-classic-style-flat/4.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/1-single-room-classic-style-flat/4.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/1-single-room-classic-style-flat/5.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/1-single-room-classic-style-flat/5.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/1-single-room-classic-style-flat/6.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/1-single-room-classic-style-flat/6.jpg" alt="foto" class="project-slider__img">
         </div>
         <div class="project-slider__item">
-          <img src="img/portfolio/1-single-room-classic-style-flat/7.jpg" alt="foto" class="project-slider__img">
+          <img data-lazy="img/portfolio/1-single-room-classic-style-flat/7.jpg" alt="foto" class="project-slider__img">
         </div>
       </div>
     </div>
@@ -213,6 +208,11 @@
 
   </div>
 
+  <script>
+    document.querySelector(".project-slider__img").onload = function () {
+      document.querySelector(".preloader").classList.add("hidden");
+    };
+  </script>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/script.js"></script>

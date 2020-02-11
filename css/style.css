@@ -75,6 +75,7 @@ body {
 
 a {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button {
@@ -86,6 +87,7 @@ button {
 }
 
 button:active {
+  -webkit-tap-highlight-color: transparent;
   outline: none;
 }
 
@@ -456,7 +458,7 @@ button:active {
 }
 
 .btn-personal-account {
-  background-image: url(../img/icons/personal-account-icon.png);
+  background-image: url(../img/icons/personal-account-icon.svg);
   -webkit-filter: drop-shadow(0px 0px 2px #261B0F);
           filter: drop-shadow(0px 0px 2px #261B0F);
 }
@@ -464,7 +466,7 @@ button:active {
 .btn-contacts {
   width: 40px;
   height: 40px;
-  background-image: url(../img/icons/phone-book-icon.png);
+  background-image: url(../img/icons/contacts.svg);
   background-size: auto;
   z-index: 20;
   -webkit-filter: drop-shadow(0px 0px 2px #261B0F);
@@ -522,11 +524,13 @@ button:active {
 
 .btn-burger {
   display: none;
+  width: 30px;
   height: 30px;
 }
 
 .btn-burger__item {
   display: block;
+  margin: auto;
   width: 22px;
   height: 2px;
   background-color: #B2ACA6;
@@ -567,11 +571,13 @@ button:active {
   position: absolute;
   right: auto;
   left: 54px;
-  top: 5px;
+  top: 7px;
   background: linear-gradient(190deg, rgba(149, 139, 128, 0.4) 0%, rgba(38, 27, 15, 0.7) 100%);
   width: 52px;
   height: 50px;
   border-radius: 100px;
+  -webkit-box-shadow: 0px 0px 5px 0px #261B0F;
+          box-shadow: 0px 0px 5px 0px #261B0F;
   opacity: 0;
   -webkit-transition-property: height, opacity;
   transition-property: height, opacity;
@@ -609,7 +615,7 @@ button:active {
 }
 
 .contacts-item:nth-child(1) {
-  background-image: url(../img/icons/call-icon.png);
+  background-image: url(../img/icons/call-icon.svg);
   -webkit-transition-duration: 0.1s;
           transition-duration: 0.1s;
   -webkit-transition-delay: 0.4s;
@@ -617,7 +623,7 @@ button:active {
 }
 
 .contacts-item:nth-child(2) {
-  background-image: url(../img/icons/email-icon.png);
+  background-image: url(../img/icons/email-icon.svg);
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
   -webkit-transition-delay: 0.3s;
@@ -625,7 +631,7 @@ button:active {
 }
 
 .contacts-item:nth-child(3) {
-  background-image: url(../img/icons/instagram-icon.png);
+  background-image: url(../img/icons/instagram-icon.svg);
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
   -webkit-transition-delay: 0.2s;
@@ -633,7 +639,7 @@ button:active {
 }
 
 .contacts-item:nth-child(4) {
-  background-image: url(../img/icons/telegram.png);
+  background-image: url(../img/icons/telegram-icon.svg);
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
   -webkit-transition-delay: 0.1s;
@@ -641,7 +647,7 @@ button:active {
 }
 
 .contacts-item:nth-child(5) {
-  background-image: url(../img/icons/whatsapp-icon.png);
+  background-image: url(../img/icons/whatsapp-icon.svg);
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
   -webkit-transition-delay: 0s;
@@ -694,6 +700,8 @@ button:active {
             flex-direction: column-reverse;
     height: 170px;
     padding: 0;
+    position: absolute;
+    right: 0;
   }
   .btn-contacts {
     -webkit-box-ordinal-group: 0;
@@ -708,8 +716,8 @@ button:active {
   }
   .contacts-container {
     left: unset;
-    right: 0;
-    top: 124px;
+    right: -4px;
+    top: 125px;
     -webkit-transition-property: width, opacity;
     transition-property: width, opacity;
   }
@@ -754,37 +762,38 @@ button:active {
             transition-delay: 0s;
   }
   .contacts-item.active:nth-child(1) {
-    top: 0;
+    top: -1px;
     right: 45px;
     -webkit-transition-delay: 0s;
             transition-delay: 0s;
   }
   .contacts-item.active:nth-child(2) {
-    top: 0;
+    top: -1px;
     right: 90px;
     -webkit-transition-delay: 0s;
             transition-delay: 0s;
   }
   .contacts-item.active:nth-child(3) {
-    top: 0;
+    top: -1px;
     right: 135px;
     -webkit-transition-delay: 0s;
             transition-delay: 0s;
   }
   .contacts-item.active:nth-child(4) {
-    top: 0;
+    top: -1px;
     right: 180px;
     -webkit-transition-delay: 0s;
             transition-delay: 0s;
   }
   .contacts-item.active:nth-child(5) {
-    top: 0;
+    top: -1px;
     right: 225px;
     -webkit-transition-delay: 0s;
             transition-delay: 0s;
   }
   .header-nav-menu {
     right: -30px;
+    top: 130%;
   }
   .header-nav-menu__list {
     right: auto;
@@ -819,6 +828,9 @@ button:active {
     font-size: 6px;
     letter-spacing: 3.5px;
     line-height: 16px;
+  }
+  .header-nav-menu {
+    top: 160%;
   }
 }
 
@@ -1378,7 +1390,6 @@ button:active {
             box-shadow: none;
   }
   .portfolio-main {
-    margin-top: 250px;
     -webkit-transition: opacity 0.2s, visibility 0.2s;
     transition: opacity 0.2s, visibility 0.2s;
   }
@@ -1504,13 +1515,11 @@ button:active {
   height: 30px;
   -webkit-filter: drop-shadow(0px 0px 2px #261B0F);
           filter: drop-shadow(0px 0px 2px #261B0F);
-  -webkit-transform: scale(1);
-          transform: scale(1);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.project-page-wrapper .cursor-pad__btn_up::after, .project-page-wrapper .cursor-pad__btn_down::after, .project-page-wrapper .cursor-pad__btn_left::after, .project-page-wrapper .cursor-pad__btn_right::after {
+.project-page-wrapper .cursor-pad__btn_up::after, .project-page-wrapper .cursor-pad__btn_down::after, .project-page-wrapper .cursor-pad__btn_left::after, .project-page-wrapper .cursor-pad__btn_right::after, .project-page-wrapper .cursor-pad__btn_center::after {
   position: absolute;
   text-transform: uppercase;
   font-weight: bold;
@@ -1524,40 +1533,45 @@ button:active {
           transition-delay: 0s;
 }
 
-.project-page-wrapper .cursor-pad__btn_up:hover::after, .project-page-wrapper .cursor-pad__btn_down:hover::after, .project-page-wrapper .cursor-pad__btn_left:hover::after, .project-page-wrapper .cursor-pad__btn_right:hover::after {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+@media (min-width: 768px) {
+  .project-page-wrapper .cursor-pad__btn_up:hover::after, .project-page-wrapper .cursor-pad__btn_down:hover::after, .project-page-wrapper .cursor-pad__btn_left:hover::after, .project-page-wrapper .cursor-pad__btn_right:hover::after, .project-page-wrapper .cursor-pad__btn_center:hover::after {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition-delay: 1s;
+            transition-delay: 1s;
+  }
 }
 
 .project-page-wrapper .cursor-pad__btn_up::after {
   content: "Предыдущий проект";
-  top: -40px;
+  top: -35px;
   left: -28px;
 }
 
 .project-page-wrapper .cursor-pad__btn_down::after {
   content: "Следующий проект";
-  bottom: -40px;
+  bottom: 139px;
   left: -20px;
 }
 
 .project-page-wrapper .cursor-pad__btn_left::after {
   content: "Предыдущее фото";
-  bottom: -35px;
-  left: -40px;
+  bottom: 89px;
+  left: 21px;
 }
 
 .project-page-wrapper .cursor-pad__btn_right::after {
   content: "Следующее фото";
-  bottom: -35px;
-  left: -10px;
+  bottom: 89px;
+  left: -84px;
+  width: 100px;
 }
 
-.project-page-wrapper .cursor-pad__btn:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+.project-page-wrapper .cursor-pad__btn_center::after {
+  content: "Все проекты";
+  bottom: 89px;
+  left: -20px;
+  width: 70px;
 }
 
 .project-page-wrapper .cursor-pad__btn path,
@@ -1568,9 +1582,11 @@ button:active {
   transition: 0.3s;
 }
 
-.project-page-wrapper .cursor-pad__btn:hover path:first-child {
-  fill: #B2ACA6;
-  stroke: #B2ACA6;
+@media (min-width: 768px) {
+  .project-page-wrapper .cursor-pad__btn:hover path:first-child {
+    fill: #B2ACA6;
+    stroke: #B2ACA6;
+  }
 }
 
 .project-page-wrapper .cursor-pad__btn_disabled {
@@ -1652,12 +1668,11 @@ button:active {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   background-image: url(../img/icons/info.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: contain;
   -webkit-filter: drop-shadow(0px 0px 2px #261B0F);
           filter: drop-shadow(0px 0px 2px #261B0F);
   opacity: 1;
@@ -1665,13 +1680,17 @@ button:active {
   transition: 0.3s;
 }
 
-.project-main:hover {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+@media (min-width: 768px) {
+  .project-main:hover {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
-.project-main:hover::after {
-  opacity: 0;
+@media (min-width: 768px) {
+  .project-main:hover::after {
+    opacity: 0;
+  }
 }
 
 .project-description {
@@ -1745,8 +1764,34 @@ button:active {
 }
 
 @media (max-width: 767px) {
+  .project-main {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .project-main::before {
+    height: 100%;
+    background: -webkit-gradient(linear, left bottom, left top, from(#261b0f), color-stop(77.08%, rgba(38, 27, 15, 0.816667)), to(rgba(38, 27, 15, 0.57)));
+    background: linear-gradient(0deg, #261b0f 0%, rgba(38, 27, 15, 0.816667) 77.08%, rgba(38, 27, 15, 0.57) 100%);
+  }
+  .project-main::after {
+    top: 30px;
+    left: 40px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .project-main.hidden {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  .project-main.hidden::after {
+    top: -50px;
+    opacity: 1;
+    visibility: visible;
+  }
   .project-description__title {
     font-size: 18px;
+    margin-top: 30px;
+    margin-right: 20px;
   }
   .project-description__details {
     -webkit-box-pack: justify;
@@ -1773,36 +1818,6 @@ button:active {
     bottom: 10px;
     -webkit-transform: translateY(0);
             transform: translateY(0);
-  }
-  .project-main {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  .project-main::before {
-    height: 100%;
-    background: -webkit-gradient(linear, left bottom, left top, from(#261b0f), color-stop(77.08%, rgba(38, 27, 15, 0.816667)), to(rgba(38, 27, 15, 0.57)));
-    background: linear-gradient(0deg, #261b0f 0%, rgba(38, 27, 15, 0.816667) 77.08%, rgba(38, 27, 15, 0.57) 100%);
-  }
-  .project-main::after {
-    top: 30px;
-    left: 40px;
-  }
-  .project-main:hover::after {
-    opacity: 0;
-    visibility: hidden;
-  }
-  .project-main.hidden {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-  }
-  .project-main.hidden::after {
-    top: -50px;
-    opacity: 1;
-    visibility: visible;
-  }
-  .project-description__title {
-    margin-top: 30px;
-    margin-right: 20px;
   }
   .project-description__details {
     -webkit-box-orient: vertical;
