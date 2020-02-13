@@ -119,9 +119,6 @@ button:active {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
-  z-index: 0;
 }
 
 .blur-background::after {
@@ -966,6 +963,7 @@ button:active {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 20%;
           flex: 0 1 20%;
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1098,6 +1096,419 @@ button:active {
   }
 }
 
+.services-page-background {
+  position: fixed;
+  background-image: url(../img/blur-background-2.jpg);
+}
+
+.services-page-background::after {
+  content: none;
+}
+
+.services-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.services-header .header-wrapper {
+  padding: 40px 0;
+}
+
+.services-header.not-transparent {
+  background-color: rgba(38, 27, 15, 0.8);
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(38, 27, 15, 0.8);
+          box-shadow: 0px 10px 10px 0px rgba(38, 27, 15, 0.8);
+}
+
+.services-main {
+  margin-top: 180px;
+  -webkit-transition: opacity 0.2s, visibility 0.2s;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.services-main.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.services-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.services-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 0 100px 100px 0;
+  background: linear-gradient(107.94deg, #39312a 34.25%, rgba(90, 78, 68, 0.25) 67.47%);
+}
+
+.services-list-item-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 60px 20px 0;
+  position: relative;
+}
+
+.services-list-item-img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 150px;
+          flex: 0 0 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.services-list-item-img .img {
+  width: 60px;
+  height: 60px;
+  margin-top: 10px;
+}
+
+.services-list-item-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.services-list-item-desc-left {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 450px;
+          flex: 0 1 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.services-list-item-desc-title {
+  font-weight: normal;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.services-list-item-desc-text {
+  font-weight: normal;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.services-list-item-desc-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.services-list-item-desc-right-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.services-list-item-desc-right-row .note {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 150px;
+          flex: 0 1 150px;
+  font-weight: normal;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 30px;
+}
+
+.services-list-item-desc-right-row .price {
+  font-size: 24px;
+  text-align: right;
+}
+
+.services-list-item-desc-right-row .price .numbers {
+  font-weight: bold;
+  font-size: 64px;
+}
+
+.services-list-item-desc-right-row .price .sqr-meters {
+  font-size: 18px;
+}
+
+.services-list-item-desc-right-row .included {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  background-image: url(../img/icons/info.svg);
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
+  background-size: contain;
+  padding-right: 35px;
+  margin-top: 25px;
+}
+
+.services-list-item-details {
+  max-width: 90%;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -30px;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+}
+
+.services-list-item-details .item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
+  height: 100%;
+  margin-bottom: 30px;
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.services-list-item-details .item__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  height: 60px;
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.services-list-item-details .item__text {
+  text-align: center;
+  font-size: 14px;
+}
+
+.services-list-item-details .item.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media (max-width: 1199px) {
+  .services-list-item-img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 130px;
+            flex: 0 0 130px;
+  }
+  .services-list-item-desc-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .services-list-item-desc-right-row .price .numbers {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 991px) {
+  .services-list-item-img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100px;
+            flex: 0 0 100px;
+  }
+  .services-list-item-desc-left {
+    margin-right: 20px;
+  }
+  .services-list-item-desc-right {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .services-list-item-desc-right-row .note {
+    display: none;
+  }
+  .services-list-item-desc-right-row .price .numbers {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .services-list-item-desc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .services-list-item-desc-left {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
+  .services-list-item-desc-title {
+    margin-bottom: 5px;
+  }
+  .services-list-item-desc-right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .services-list-item-desc-right-row {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .services-list-item-desc-right-row .price .numbers {
+    font-size: 36px;
+  }
+  .services-list-item-desc-right-row .price .sqr-meters {
+    font-size: 12px;
+    display: block;
+    margin-top: -5px;
+  }
+  .services-list-item-desc-right-row .included {
+    margin-top: 10px;
+  }
+  .services-list-item-details .item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+  .services-list-item-details .item__img {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+  .services-list-item-details .item__text {
+    font-size: 12px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-list-item-img {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+  }
+  .services-list-item-desc-title {
+    margin-left: 15px;
+  }
+  .services-list-item-desc-text {
+    display: none;
+  }
+  .services-list-item-desc-right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .services-list-item-desc-right-row .price {
+    font-size: 14px;
+  }
+  .services-list-item-desc-right-row .price .numbers {
+    font-size: 24px;
+  }
+  .services-list-item-desc-right-row .price .sqr-meters {
+    font-size: 10px;
+  }
+  .services-list-item-details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .services-list-item-details .item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+  .services-list-item-details .item__img {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+  .services-list-item-details .item__text {
+    font-size: 12px;
+    text-align: left;
+  }
+}
+
 .portfolio-header {
   position: fixed;
   top: 0;
@@ -1123,11 +1534,6 @@ button:active {
 .portfolio-page-background {
   position: fixed;
   background-image: url(../img/blur-background.jpg);
-  background-position: 50% 50%;
-  background-size: cover;
-  z-index: auto;
-  -webkit-filter: none;
-          filter: none;
 }
 
 .portfolio-page-background::after {

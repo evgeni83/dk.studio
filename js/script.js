@@ -26,11 +26,19 @@ $(document).ready(function() {
     "background-size": "cover"
   });
 
-  $(".portfolio-page-wrapper").on("scroll", function(e) {
+  $(".portfolio-page-wrapper").on("scroll", function() {
     if ($(".portfolio-main").offset().top < $(".portfolio-header").height()) {
       $(".portfolio-header").addClass("not-transparent");
     } else {
       $(".portfolio-header").removeClass("not-transparent");
+    }
+  });
+
+  $(".services-page-wrapper").on("scroll", function() {
+    if ($(".services-main").offset().top < $(".services-header").height()) {
+      $(".services-header").addClass("not-transparent");
+    } else {
+      $(".services-header").removeClass("not-transparent");
     }
   });
 
@@ -91,6 +99,13 @@ $(document).ready(function() {
         return;
       }
       closeAll();
+      return;
+    }
+
+    if ($(e.target).hasClass("included")) {
+      closeAll();
+      $(".services-list-item-details .item").toggleClass("hidden");
+      $(".services-list-item-details").toggleClass("hidden");
       return;
     }
 
@@ -212,6 +227,7 @@ $(document).ready(function() {
     $(".header-nav-menu").removeClass("active");
     $(".home-page-main").removeClass("hidden");
     $(".portfolio-main").removeClass("hidden");
+    $(".services-main").removeClass("hidden");
     $(".cap-page-main").removeClass("hidden");
     $(".btn-menu span").removeClass("active");
     $(".btn-burger__item").removeClass("active");
@@ -228,12 +244,14 @@ $(document).ready(function() {
       $(".portfolio-main").addClass("hidden");
       $(".cap-page-main").addClass("hidden");
       $(".project-main").addClass("hidden");
+      $(".services-main").addClass("hidden");
       $(".btn-menu span").addClass("active");
       $(".btn-burger__item").addClass("active");
     } else {
       $(".home-page-main").removeClass("hidden");
       $(".portfolio-main").removeClass("hidden");
       $(".cap-page-main").removeClass("hidden");
+      $(".services-main").removeClass("hidden");
       $(".btn-menu span").removeClass("active");
       $(".btn-burger__item").removeClass("active");
     }
