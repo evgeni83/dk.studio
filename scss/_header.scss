@@ -217,15 +217,15 @@
     box-shadow: 0px 0px 5px 0px $dark-main;
     opacity: 0;
     transition-property: height, opacity;
-    transition-duration: 0.5s, 0.1s;
-    transition-delay: 0s, 0.5s;
+    transition-duration: 0.4s, 0.1s;
+    transition-delay: 0s, 0.4s;
     transition-timing-function: linear, linear;
     z-index: 1;
 
     &.active {
-      height: 276px;
+      height: 235px;
       opacity: 1;
-      transition-duration: 0.5s, 0s;
+      transition-duration: 0.4s, 0s;
       transition-delay: 0s, 0s;
     }
   }
@@ -245,26 +245,21 @@
     &:nth-child(1) {
       background-image: url(../img/icons/call-icon.svg);
       transition-duration: 0.1s;
-      transition-delay: 0.4s;
+      transition-delay: 0.3s;
     }
     &:nth-child(2) {
       background-image: url(../img/icons/email-icon.svg);
       transition-duration: 0.2s;
-      transition-delay: 0.3s;
+      transition-delay: 0.2s;
     }
     &:nth-child(3) {
       background-image: url(../img/icons/instagram-icon.svg);
       transition-duration: 0.3s;
-      transition-delay: 0.2s;
-    }
-    &:nth-child(4) {
-      background-image: url(../img/icons/telegram-icon.svg);
-      transition-duration: 0.4s;
       transition-delay: 0.1s;
     }
-    &:nth-child(5) {
+    &:nth-child(4) {
       background-image: url(../img/icons/whatsapp-icon.svg);
-      transition-duration: 0.5s;
+      transition-duration: 0.4s;
       transition-delay: 0s;
     }
 
@@ -283,10 +278,6 @@
       }
       &:nth-child(4) {
         top: 180px;
-        transition-delay: 0s;
-      }
-      &:nth-child(5) {
-        top: 225px;
         transition-delay: 0s;
       }
     }
@@ -330,7 +321,7 @@
 
       &.active {
         height: 50px;
-        width: 276px;
+        width: 235px;
       }
     }
     &-item {
@@ -340,22 +331,18 @@
 
       &:nth-child(1) {
         transition-duration: 0.1s;
-        transition-delay: 0.4s;
+        transition-delay: 0.3s;
       }
       &:nth-child(2) {
         transition-duration: 0.2s;
-        transition-delay: 0.3s;
+        transition-delay: 0.2s;
       }
       &:nth-child(3) {
         transition-duration: 0.3s;
-        transition-delay: 0.2s;
+        transition-delay: 0.1s;
       }
       &:nth-child(4) {
         transition-duration: 0.4s;
-        transition-delay: 0.1s;
-      }
-      &:nth-child(5) {
-        transition-duration: 0.5s;
         transition-delay: 0s;
       }
 
@@ -378,11 +365,6 @@
         &:nth-child(4) {
           top: -1px;
           right: 180px;
-          transition-delay: 0s;
-        }
-        &:nth-child(5) {
-          top: -1px;
-          right: 225px;
           transition-delay: 0s;
         }
       }

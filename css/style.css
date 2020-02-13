@@ -581,20 +581,20 @@ button:active {
   opacity: 0;
   -webkit-transition-property: height, opacity;
   transition-property: height, opacity;
-  -webkit-transition-duration: 0.5s, 0.1s;
-          transition-duration: 0.5s, 0.1s;
-  -webkit-transition-delay: 0s, 0.5s;
-          transition-delay: 0s, 0.5s;
+  -webkit-transition-duration: 0.4s, 0.1s;
+          transition-duration: 0.4s, 0.1s;
+  -webkit-transition-delay: 0s, 0.4s;
+          transition-delay: 0s, 0.4s;
   -webkit-transition-timing-function: linear, linear;
           transition-timing-function: linear, linear;
   z-index: 1;
 }
 
 .contacts-container.active {
-  height: 276px;
+  height: 235px;
   opacity: 1;
-  -webkit-transition-duration: 0.5s, 0s;
-          transition-duration: 0.5s, 0s;
+  -webkit-transition-duration: 0.4s, 0s;
+          transition-duration: 0.4s, 0s;
   -webkit-transition-delay: 0s, 0s;
           transition-delay: 0s, 0s;
 }
@@ -618,38 +618,30 @@ button:active {
   background-image: url(../img/icons/call-icon.svg);
   -webkit-transition-duration: 0.1s;
           transition-duration: 0.1s;
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }
 
 .contacts-item:nth-child(2) {
   background-image: url(../img/icons/email-icon.svg);
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
-  -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
 }
 
 .contacts-item:nth-child(3) {
   background-image: url(../img/icons/instagram-icon.svg);
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-}
-
-.contacts-item:nth-child(4) {
-  background-image: url(../img/icons/telegram-icon.svg);
-  -webkit-transition-duration: 0.4s;
-          transition-duration: 0.4s;
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
 }
 
-.contacts-item:nth-child(5) {
+.contacts-item:nth-child(4) {
   background-image: url(../img/icons/whatsapp-icon.svg);
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
@@ -674,12 +666,6 @@ button:active {
 
 .contacts-item.active:nth-child(4) {
   top: 180px;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-}
-
-.contacts-item.active:nth-child(5) {
-  top: 225px;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
@@ -723,7 +709,7 @@ button:active {
   }
   .contacts-container.active {
     height: 50px;
-    width: 276px;
+    width: 235px;
   }
   .contacts-item {
     left: auto;
@@ -734,30 +720,24 @@ button:active {
   .contacts-item:nth-child(1) {
     -webkit-transition-duration: 0.1s;
             transition-duration: 0.1s;
-    -webkit-transition-delay: 0.4s;
-            transition-delay: 0.4s;
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
   }
   .contacts-item:nth-child(2) {
     -webkit-transition-duration: 0.2s;
             transition-duration: 0.2s;
-    -webkit-transition-delay: 0.3s;
-            transition-delay: 0.3s;
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
   }
   .contacts-item:nth-child(3) {
     -webkit-transition-duration: 0.3s;
             transition-duration: 0.3s;
-    -webkit-transition-delay: 0.2s;
-            transition-delay: 0.2s;
+    -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
   }
   .contacts-item:nth-child(4) {
     -webkit-transition-duration: 0.4s;
             transition-duration: 0.4s;
-    -webkit-transition-delay: 0.1s;
-            transition-delay: 0.1s;
-  }
-  .contacts-item:nth-child(5) {
-    -webkit-transition-duration: 0.5s;
-            transition-duration: 0.5s;
     -webkit-transition-delay: 0s;
             transition-delay: 0s;
   }
@@ -782,12 +762,6 @@ button:active {
   .contacts-item.active:nth-child(4) {
     top: -1px;
     right: 180px;
-    -webkit-transition-delay: 0s;
-            transition-delay: 0s;
-  }
-  .contacts-item.active:nth-child(5) {
-    top: -1px;
-    right: 225px;
     -webkit-transition-delay: 0s;
             transition-delay: 0s;
   }
