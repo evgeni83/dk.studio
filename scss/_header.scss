@@ -324,22 +324,18 @@
     }
 
     &:nth-child(1) {
-      background-image: url(../img/icons/call-icon.svg);
       transition-duration: 0.1s;
       transition-delay: 0.3s;
     }
     &:nth-child(2) {
-      background-image: url(../img/icons/email-icon.svg);
       transition-duration: 0.2s;
       transition-delay: 0.2s;
     }
     &:nth-child(3) {
-      background-image: url(../img/icons/instagram-icon.svg);
       transition-duration: 0.3s;
       transition-delay: 0.1s;
     }
     &:nth-child(4) {
-      background-image: url(../img/icons/whatsapp-icon.svg);
       transition-duration: 0.4s;
       transition-delay: 0s;
     }
@@ -508,11 +504,5 @@
 
   .header-nav-menu {
     top: 160%;
-  }
-}
-
-@media (max-width: 370px) {
-  .header-right {
-    height: 150px;
   }
 }

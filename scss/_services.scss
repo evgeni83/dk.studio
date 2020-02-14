@@ -52,6 +52,11 @@
         rgba(90, 78, 68, 0.25) 67.47%
       );
       margin-bottom: 30px;
+      cursor: pointer;
+
+      &:hover .included {
+        color: #fff;
+      }
 
       &-main {
         display: flex;
@@ -136,10 +141,6 @@
               padding-right: 35px;
               margin-top: 25px;
               transition: color 0.3s;
-
-              &:hover {
-                color: #fff;
-              }
             }
           }
         }
@@ -332,6 +333,9 @@
 
 @media (max-width: 480px) {
   .services {
+    &-main {
+      margin-top: 210px;
+    }
     &-list {
       &-item {
         border-radius: 0 20px 20px 0;
@@ -339,8 +343,6 @@
           padding: 10px 35px 10px 0;
         }
         &-desc {
-          &-left {
-          }
           &-title {
             margin-right: 0;
             margin-bottom: 0;

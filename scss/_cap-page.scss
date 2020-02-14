@@ -1,5 +1,9 @@
 .cap-page-wrapper {
   overflow: hidden;
+
+  .contacts-container {
+    z-index: 1;
+  }
 }
 
 .cap-background {
@@ -20,7 +24,7 @@
 .cap-page-main {
   position: relative;
   height: calc(100% - 127px);
-  z-index: 0;
+  z-index: auto;
 
   &-wrapper {
     flex: 0 1 190px;
@@ -82,7 +86,6 @@
     flex: 0 1 60px;
     margin-top: 50px;
   }
-  
 }
 
 @media (max-width: 400px) {

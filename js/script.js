@@ -108,7 +108,7 @@ $(document).ready(function() {
       return;
     }
 
-    if ($(e.target).hasClass("included")) {
+    if ($(e.target).parents("services-list-item")) {
       closeAll();
 
       if (
