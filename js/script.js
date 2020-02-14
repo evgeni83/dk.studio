@@ -26,6 +26,8 @@ $(document).ready(function() {
     "background-size": "cover"
   });
 
+  $(".services-list-item-details").hide();
+
   $(".portfolio-page-wrapper").on("scroll", function() {
     if ($(".portfolio-main").offset().top < $(".portfolio-header").height()) {
       $(".portfolio-header").addClass("not-transparent");
@@ -49,6 +51,10 @@ $(document).ready(function() {
       "background-position": "center",
       "background-size": "cover"
     });
+
+    if ($(window).innerWidth() > 480) {
+      $(".services-list-item-desc-text").removeAttr("style");
+    }
   });
 
   $(document).click(function(e) {
@@ -104,8 +110,45 @@ $(document).ready(function() {
 
     if ($(e.target).hasClass("included")) {
       closeAll();
-      $(".services-list-item-details .item").toggleClass("hidden");
-      $(".services-list-item-details").toggleClass("hidden");
+
+      if (
+        $(e.target)
+          .parents(".services-list-item")
+          .find(".services-list-item-details .item")
+          .hasClass("hidden")
+      ) {
+        $(".services-list-item-details .item").addClass("hidden");
+        $(".services-list-item-details").slideUp();
+
+        if ($(window).innerWidth() < 481) {
+          $(".services-list-item-desc-text").slideUp();
+        }
+
+        $(e.target)
+          .parents(".services-list-item")
+          .find(".services-list-item-details")
+          .slideDown();
+
+        if ($(window).innerWidth() < 481) {
+          $(e.target)
+            .parents(".services-list-item")
+            .find(".services-list-item-desc-text")
+            .slideDown();
+        }
+
+        setTimeout(function() {
+          $(e.target)
+            .parents(".services-list-item")
+            .find(".services-list-item-details .item")
+            .removeClass("hidden");
+        }, 300);
+      } else {
+        $(".services-list-item-details .item").addClass("hidden");
+        $(".services-list-item-details").slideUp();
+        if ($(window).innerWidth() < 481) {
+          $(".services-list-item-desc-text").slideUp();
+        }
+      }
       return;
     }
 

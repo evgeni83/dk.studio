@@ -77,6 +77,10 @@
 .logo {
   display: flex;
   align-items: center;
+  &:hover &__title,
+  &:hover &__subtitle {
+    color: $header-color;
+  }
 
   &-left {
     margin-right: 16px;
@@ -87,6 +91,7 @@
     font-family: "Athelas", serif;
     line-height: 24px;
     text-transform: uppercase;
+    transition: color 0.3s;
   }
 
   &__title {
@@ -427,5 +432,11 @@
 
   .header-nav-menu {
     top: 160%;
+  }
+}
+
+@media (max-width: 370px) {
+  .header-right {
+    height: 150px;
   }
 }
