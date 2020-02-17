@@ -21,7 +21,7 @@
   &-page {
     &-background {
       position: fixed;
-      background-image: url(../img/blur-background.jpg);
+      background-image: url(../img/blur-background-2.jpg);
       &::after {
         content: none;
       }
@@ -30,6 +30,12 @@
 
   &-main {
     margin-top: 180px;
+    transition: opacity 0.2s, visibility 0.2s;
+
+    &.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 
   &-title {
@@ -225,13 +231,6 @@
       }
     }
     &-main {
-      // margin-top: 250px;
-      transition: opacity 0.2s, visibility 0.2s;
-
-      &.hidden {
-        opacity: 0;
-        visibility: hidden;
-      }
     }
     &-list {
       &-item {

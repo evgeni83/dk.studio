@@ -1690,7 +1690,7 @@ button:active {
 
 .portfolio-page-background {
   position: fixed;
-  background-image: url(../img/blur-background.jpg);
+  background-image: url(../img/blur-background-2.jpg);
 }
 
 .portfolio-page-background::after {
@@ -1699,6 +1699,13 @@ button:active {
 
 .portfolio-main {
   margin-top: 180px;
+  -webkit-transition: opacity 0.2s, visibility 0.2s;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.portfolio-main.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .portfolio-title {
@@ -1925,14 +1932,6 @@ button:active {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
     -webkit-box-shadow: none;
             box-shadow: none;
-  }
-  .portfolio-main {
-    -webkit-transition: opacity 0.2s, visibility 0.2s;
-    transition: opacity 0.2s, visibility 0.2s;
-  }
-  .portfolio-main.hidden {
-    opacity: 0;
-    visibility: hidden;
   }
   .portfolio-list-item-img {
     -webkit-box-flex: 0;
