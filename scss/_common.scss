@@ -20,6 +20,13 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+input,
+textarea {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
 button {
   display: block;
   border: none;

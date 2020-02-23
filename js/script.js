@@ -28,19 +28,11 @@ $(document).ready(function() {
 
   $(".services-list-item-details").hide();
 
-  $(".portfolio-page-wrapper").on("scroll", function() {
-    if ($(".portfolio-main").offset().top < $(".portfolio-header").height()) {
-      $(".portfolio-header").addClass("not-transparent");
+  $(".page-wrapper").on("scroll", function() {
+    if ($("main").offset().top < $("header").height()) {
+      $("header").addClass("not-transparent");
     } else {
-      $(".portfolio-header").removeClass("not-transparent");
-    }
-  });
-
-  $(".services-page-wrapper").on("scroll", function() {
-    if ($(".services-main").offset().top < $(".services-header").height()) {
-      $(".services-header").addClass("not-transparent");
-    } else {
-      $(".services-header").removeClass("not-transparent");
+      $("header").removeClass("not-transparent");
     }
   });
 
@@ -164,10 +156,6 @@ $(document).ready(function() {
       return;
     }
 
-    $(e.currentTarget)
-      .parent()
-      .addClass("active");
-
     var xClick =
       $(e.target)
         .parent()
@@ -222,7 +210,7 @@ $(document).ready(function() {
       {
         duration: 1000,
         progress: function() {
-          $(".page-slider__img").offset({ top: 0, left: 0 });
+          $(targetImageElement).offset({ top: 0, left: 0 });
         },
         done: function() {
           $(".page-slider").css(
@@ -288,6 +276,7 @@ $(document).ready(function() {
       $(".cap-page-main").addClass("hidden");
       $(".project-main").addClass("hidden");
       $(".services-main").addClass("hidden");
+      $(".contacts-page__main").addClass("hidden");
       $(".btn-menu span").addClass("active");
       $(".btn-burger__item").addClass("active");
     } else {
@@ -295,6 +284,7 @@ $(document).ready(function() {
       $(".portfolio-main").removeClass("hidden");
       $(".cap-page-main").removeClass("hidden");
       $(".services-main").removeClass("hidden");
+      $(".contacts-page__main").removeClass("hidden");
       $(".btn-menu span").removeClass("active");
       $(".btn-burger__item").removeClass("active");
     }

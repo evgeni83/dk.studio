@@ -75,7 +75,7 @@
             background-color: $main-color;
             color: $header-color;
             pointer-events: none;
-            transition-property: visibility, opacity;
+            transition: visibility, opacity;
             transition-duration: 0.5s, 0.5s;
             transition-delay: 0s, 0s;
           }
@@ -87,7 +87,7 @@
             &:hover::after {
               opacity: 1;
               visibility: visible;
-              transition-property: visibility, opacity;
+              transition: visibility, opacity;
               transition-duration: 0.5s, 0.5s;
               transition-delay: 0.2s, 0.2s;
             }
