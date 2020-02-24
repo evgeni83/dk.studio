@@ -1,51 +1,51 @@
 <?php
-$name = trim($_POST['userName']);
-$email = trim($_POST['userEmail']);
-$tel = trim($_POST['userTel']);
-$text = trim($_POST['userText']);
+// Файлы phpmailer
+require 'phpmailer/PHPMailer.php';
+require 'phpmailer/SMTP.php';
+require 'phpmailer/Exception.php';
 
-// указываем адрес отправителя, можно указать адрес на домене Вашего сайта
-$fromMail = 'admin@yousite.ru';
-$fromName = 'yousite.ru Форма';
+// Переменные, которые отправляет пользователь
+$name = $_POST['userName'];
+$email = $_POST['userEmail'];
+$tel = $_POST['userTel'];
+$text = $_POST['userText'];
 
-// Сюда введите Ваш email
-$emailTo = 'youemail@gmail.com';
-$subject = 'Форма обратной связи на php';
-$subject = '=?utf-8?b?' . base64_encode($subject) . '?=';
-$headers = "Content-type: text/plain; charset=\"utf-8\"\r\n";
-$headers .= "From: " . $fromName . " <" . $fromMail . "> \r\n";
+$mail = new PHPMailer\PHPMailer\PHPMailer();
+try {
+    $msg = "ok";
+    $mail->isSMTP();
+    $mail->CharSet = "UTF-8";
+    $mail->SMTPAuth = true;
 
-// тело письма
-$body = "Получено письмо с сайта testsite.ru \n Имя: $name\nТелефон: $tel \n E-mail: $email\nСообщение: $text";
+    // Настройки вашей почты
+    $mail->Host = 'smtp.gmail.com'; // SMTP сервера GMAIL
+    $mail->Username = 'kazachenkodarina'; // Логин на почте
+    $mail->Password = 'DK_studio2020'; // Пароль на почте
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port = 465;
+    $mail->setFrom('kazachenkodarina@gmail.com', 'darina kazachenko'); // Адрес самой почты и имя отправителя
 
-// сообщение будет отправлено в случае, если поле с номером телефона не пустое
-if (strlen($tel) > 0) {
-    $mail = mail($emailTo, $subject, $body, $headers, '-f' . $fromMail);
+    // Получатель письма
+    $mail->addAddress('evgeni.daniluk@yandex.ru');
+
+    // -----------------------
+    // Само письмо
+    // -----------------------
+    $mail->isHTML(true);
+
+    $mail->Subject = 'Заявка с сайта dk.studio';
+    $mail->Body = "<b>Имя:</b> $name <br>
+        <b>Почта:</b> $email<br><br>
+        <b>Телефон:</b> $tel<br><br>
+        <b>Сообщение:</b><br>$text";
+
+// Проверяем отравленность сообщения
+    if ($mail->send()) {
+        echo "$msg";
+    } else {
+        echo "Сообщение не было отправлено. Неверно указаны настройки вашей почты";
+    }
+
+} catch (Exception $e) {
+    echo "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
-
-?>
-
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <title>Форма обратной связи на PHP с отправкой на почту</title>
-</head>
-<body>
-<h2>Форма обратной связи на PHP</h2>
-<!--Данные введенные пользователем обрабатываются кодом в mail.php-->
-<pre>
-
-
-<?php
-//
-//if (isset($_POST['send'])) {
-//    mail($_POST['email'], 'Заказа с сайта example.com', $_POST['text']);
-//}
-
-var_dump($_POST);
-
-?>
-</pre>
-
-</body>
-</html>

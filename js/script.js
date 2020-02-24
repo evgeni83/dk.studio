@@ -254,6 +254,40 @@ $(document).ready(function() {
     nextArrow: $(".cursor-pad__btn_right")
   });
 
+  // маска ввода телефона
+  $("#userTel").mask("+7(999) 999-9999");
+
+  // Отправка данных на сервер
+  $('.form').trigger('reset');
+  $(function () {
+    'use strict';
+    $('.form').on('submit', function (e) {
+      e.preventDefault();
+      $.ajax({
+        url: 'send.php',
+        type: 'POST',
+        contentType: false,
+        processData: false,
+        data: new FormData(this),
+        success: function (msg) {
+          console.log(msg);
+          if (msg == 'ok') {
+            closeAll();
+            $(".contacts-page__main").addClass("hidden");
+            $(".popup").removeClass("hidden");
+            $(".popup__success-msg").removeClass("hidden");
+            $('.form').trigger('reset'); // очистка формы
+          } else {
+            closeAll();
+            $(".contacts-page__main").addClass("hidden");
+            $(".popup").removeClass("hidden");
+            $(".popup__error-msg").removeClass("hidden");
+          }
+        }
+      });
+    });
+  });
+
   function closeAll() {
     $(".header-nav-menu").removeClass("active");
     $(".home-page-main").removeClass("hidden");
@@ -261,6 +295,9 @@ $(document).ready(function() {
     $(".portfolio-main").removeClass("hidden");
     $(".services-main").removeClass("hidden");
     $(".contacts-page__main").removeClass("hidden");
+    $(".popup").addClass("hidden");
+    $(".popup__success-msg").addClass("hidden");
+    $(".popup__error-msg").addClass("hidden");
     $(".cap-page-main").removeClass("hidden");
     $(".btn-menu span").removeClass("active");
     $(".btn-burger__item").removeClass("active");
