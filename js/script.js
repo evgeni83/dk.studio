@@ -89,7 +89,7 @@ $(document).ready(function() {
       return;
     }
 
-    if ($(e.target).hasClass("project-main")) {
+    if (($(e.target).hasClass("project-main") || $(e.target).parents(".project-main").length > 0) && $(window).innerWidth() < 767) {
       if ($(".project-main").hasClass("hidden")) {
         closeAll();
         $(".project-main").removeClass("hidden");
@@ -100,14 +100,35 @@ $(document).ready(function() {
       return;
     }
 
-    if ($(e.target).parents("services-list-item")) {
+    if ($(e.target).hasClass("full-size-btn") || $(e.target).parents(".full-size-btn").length > 0) {
+      closeAll();
+      var currentImagePath = $(".slick-current .project-slider__img").attr("src");
+      var currentImage = `<img src="${currentImagePath}" alt="foto" class="img">`;
+      $(".project-popup__img").empty();
+      $(".project-popup__img").append(currentImage);
+      $(".header").hide();
+      $(".cursor-pad").hide();
+      $(".project-main").hide();
+      $(".project-popup").removeClass("hidden");
+      return;
+    }
+
+    if ($(e.target).hasClass("project-popup") || $(e.target).parents(".project-popup").length > 0) {
+      $(".project-popup").addClass("hidden");
+      $(".header").show();
+      $(".cursor-pad").show();
+      $(".project-main").show();
+      return;
+    }
+
+    if ($(e.target).parents(".services-list-item").length > 0) {
       closeAll();
 
       if (
-        $(e.target)
-          .parents(".services-list-item")
-          .find(".services-list-item-details .item")
-          .hasClass("hidden")
+          $(e.target)
+              .parents(".services-list-item")
+              .find(".services-list-item-details .item")
+              .hasClass("hidden")
       ) {
         $(".services-list-item-details .item").addClass("hidden");
         $(".services-list-item-details").slideUp();
@@ -117,7 +138,7 @@ $(document).ready(function() {
         }
 
         $(e.target)
-          .parents(".services-list-item")
+            .parents(".services-list-item")
           .find(".services-list-item-details")
           .slideDown();
 

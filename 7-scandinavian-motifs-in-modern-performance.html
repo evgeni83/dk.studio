@@ -190,6 +190,12 @@
           </svg>
         </a>
       </div>
+
+      <button class="full-size-btn">
+        <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9994 0C6.71619 0 0 6.71619 0 14.9994C0 23.2825 6.71619 30 14.9994 30C23.2825 30 30 23.2825 30 14.9994C30 6.71619 23.2825 0 14.9994 0ZM11.5 23.5H7C6.72386 23.5 6.5 23.2761 6.5 23V18.5C6.5 18.2239 6.72386 18 7 18C7.27614 18 7.5 18.2239 7.5 18.5L7.5 21.7929L11.6464 17.6464L12.3536 18.3536L8.20711 22.5H11.5C11.7761 22.5 12 22.7239 12 23C12 23.2761 11.7761 23.5 11.5 23.5ZM23 6.5L18.5 6.5C18.2239 6.5 18 6.72386 18 7C18 7.27614 18.2239 7.5 18.5 7.5L21.7929 7.5L17.6464 11.6464L18.3536 12.3536L22.5 8.20711V11.5C22.5 11.7761 22.7239 12 23 12C23.2761 12 23.5 11.7761 23.5 11.5L23.5 7C23.5 6.72386 23.2761 6.5 23 6.5ZM6.5 11.5L6.5 7C6.5 6.72386 6.72386 6.5 7 6.5L11.5 6.5C11.7761 6.5 12 6.72386 12 7C12 7.27614 11.7761 7.5 11.5 7.5H8.20711L12.3536 11.6464L11.6464 12.3536L7.5 8.20711V11.5C7.5 11.7761 7.27614 12 7 12C6.72386 12 6.5 11.7761 6.5 11.5ZM23.5 23V18.5C23.5 18.2239 23.2761 18 23 18C22.7239 18 22.5 18.2239 22.5 18.5V21.7929L18.3536 17.6464L17.6464 18.3536L21.7929 22.5H18.5C18.2239 22.5 18 22.7239 18 23C18 23.2761 18.2239 23.5 18.5 23.5H23C23.2761 23.5 23.5 23.2761 23.5 23Z" fill="#DCD6D1"/>
+        </svg>
+      </button>
     </div>
 
     <div class="project-slider-wrapper">
@@ -308,6 +314,10 @@
 
   </div>
 
+  <div class="popup project-popup hidden">
+    <div class="project-popup__img"></div>
+  </div>
+
   <script>
     document.querySelector(".project-slider__img").onload = function () {
       document.querySelector(".preloader").classList.add("hidden");
@@ -315,7 +325,8 @@
   </script>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/slick.min.js"></script>
-  <script src="js/script.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 
 </html>
