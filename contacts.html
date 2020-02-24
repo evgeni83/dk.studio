@@ -252,7 +252,7 @@
               <h2 class="section__title">
                 Свяжитесь с нами, чтобы обсудить все возникшие у Вас вопросы
               </h2>
-              <form action="" class="form">
+              <form action="/send.php" method="post" class="form">
                 <label class="form__label">
                   <input
                     type="text"
@@ -276,7 +276,7 @@
                     type="tel"
                     name="userTel"
                     id="userTel"
-                    class="form__input fopm__input_tel"
+                    class="form__input form__input_tel"
                     placeholder="телефон"
                   />
                 </label>
@@ -288,7 +288,7 @@
                     placeholder="текст"
                   ></textarea>
                 </label>
-                <button type="submit" class="form__button">отправить</button>
+                <button type="submit" class="form__button" value="send">отправить</button>
               </form>
             </section>
           </div>
