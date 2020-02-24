@@ -17,8 +17,8 @@
 
     &.not-transparent {
       background-color: rgba(38, 27, 15, 0.8);
-      -webkit-box-shadow: 0px 10px 10px 0px rgba(38, 27, 15, 0.8);
-      box-shadow: 0px 10px 10px 0px rgba(38, 27, 15, 0.8);
+      -webkit-box-shadow: 0 10px 10px 0 rgba(38, 27, 15, 0.8);
+      box-shadow: 0 10px 10px 0 rgba(38, 27, 15, 0.8);
     }
   }
 
@@ -147,7 +147,7 @@
         &__label {
           height: 15px;
           border: 1px solid $header-color;
-          border-top-color: transparent;
+          border-top: none;
           border-radius: 0 0 15px 15px;
 
           &_textarea {

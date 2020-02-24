@@ -1,0 +1,99 @@
+.about-page {
+
+  &__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url(../img/contacts-bg.jpg);
+  }
+
+  &__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    box-shadow: none;
+    transition: 0.4s;
+
+    &.not-transparent {
+      background-color: rgba(38, 27, 15, 0.8);
+      -webkit-box-shadow: 0 10px 10px 0 rgba(38, 27, 15, 0.8);
+      box-shadow: 0 10px 10px 0 rgba(38, 27, 15, 0.8);
+    }
+  }
+
+  &__main {
+    position: relative;
+    margin-top: 150px;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.2s, visibility 0.2s;
+
+    &.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__container {
+    .section {
+      margin: 50px auto;
+      max-width: 750px;
+      padding-top: 60px;
+      background: linear-gradient(180deg,
+              #261B0F 0%,
+              rgba(38, 27, 15, 0.785582) 42.19%,
+              rgba(38, 27, 15, 0.71875) 70.31%,
+              rgba(38, 27, 15, 0) 100%);
+
+      &__text {
+        display: block;
+        font-weight: 300;
+        font-size: 18px;
+        color: #FFFFFF;
+        margin: 0 100px;
+      }
+
+      &__img {
+        margin-top: 50px;
+
+        .img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .about-page {
+    &__container {
+      .section {
+        &__text {
+          margin: 0 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page {
+    &__container {
+      .section {
+        padding-top: 30px;
+        &__text {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

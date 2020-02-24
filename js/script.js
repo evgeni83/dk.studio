@@ -257,8 +257,10 @@ $(document).ready(function() {
   function closeAll() {
     $(".header-nav-menu").removeClass("active");
     $(".home-page-main").removeClass("hidden");
+    $(".about-page__main").removeClass("hidden");
     $(".portfolio-main").removeClass("hidden");
     $(".services-main").removeClass("hidden");
+    $(".contacts-page__main").removeClass("hidden");
     $(".cap-page-main").removeClass("hidden");
     $(".btn-menu span").removeClass("active");
     $(".btn-burger__item").removeClass("active");
@@ -272,6 +274,7 @@ $(document).ready(function() {
     $(".header-nav-menu").toggleClass("active");
     if ($(".header-nav-menu").hasClass("active")) {
       $(".home-page-main").addClass("hidden");
+      $(".about-page__main").addClass("hidden");
       $(".portfolio-main").addClass("hidden");
       $(".cap-page-main").addClass("hidden");
       $(".project-main").addClass("hidden");
@@ -281,6 +284,7 @@ $(document).ready(function() {
       $(".btn-burger__item").addClass("active");
     } else {
       $(".home-page-main").removeClass("hidden");
+      $(".about-page__main").removeClass("hidden");
       $(".portfolio-main").removeClass("hidden");
       $(".cap-page-main").removeClass("hidden");
       $(".services-main").removeClass("hidden");
